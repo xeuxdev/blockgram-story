@@ -1,15 +1,196 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-face {
+  font-family: "Garnett";
+  src: url("./fonts/Garnett-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+@font-face {
+  font-family: "Garnett";
+  src: url("./fonts/Garnett-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rza";
+  src: url("./fonts/Rza-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@theme {
+  --font-main: "Garnett", sans-serif;
+  --font-sec: "Satoshi", sans-serif;
+  --font-ter: "Rza", sans-serif;
+
+  --color-light-purple: var(--light-purple);
+  --color-red: var(--red);
+  --color-dark-purple: var(--dark-purple);
+  --color-white: var(--white);
+  --color-orange: var(--orange);
+  --color-blue: var(--blue);
+  --color-green: var(--green);
+  --color-black: var(--black);
+  --color-purple: var(--purple);
+}
+
+:root {
+  --light-purple: #cac4de;
+  --red: #ff6b4b;
+  --dark-purple: #3f2b4c;
+  --white: #fefdfd;
+  --orange: #ff7f3e;
+  --blue: #6140ff;
+  --green: #9cc25d;
+  --black: #232324;
+  --purple: #9888fb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.image {
+  z-index: 1;
+  position: relative;
+  max-width: none;
+  width: 100%;
+}
+
+.wrapper {
+  border: 0.104vw solid #312b4c;
+  border-radius: 1.25vw;
+  flex: 1;
+  padding-block: 4.167vw;
+  position: relative;
+  overflow: hidden;
+
+  &.small {
+    padding-block: 2.083vw;
   }
+}
+
+.paddings {
+  padding-inline: 4.167vw;
+}
+
+.text-styles-h1 {
+  @apply text-[5vw]/[100%] -tracking-[0.052vw] font-main;
+}
+
+.text-styles-h2 {
+  @apply text-[3.333vw]/[115%] -tracking-[0.031vw] font-main;
+}
+
+.text-styles-h3 {
+  @apply text-[2.5vw]/[115%] -tracking-[0.026vw] font-main;
+}
+
+.text-styles-h4 {
+  @apply text-[1.563vw]/[125%] relative;
+
+  &.secondary {
+    @apply font-sec;
+  }
+}
+
+.text-styles-content {
+  @apply font-medium text-[1.042vw]/[145%] font-sec;
+}
+
+.alt {
+  font-family: var(--font-ter);
+}
+
+.title-desc_wrapper {
+  grid-column-gap: 1.042vw;
+  grid-row-gap: 1.042vw;
+  flex-flow: row;
+  display: flex;
+}
+
+.title-desc_left-title {
+  grid-column-gap: 1.042vw;
+  grid-row-gap: 1.042vw;
+  flex-flow: column;
+  width: 35.365vw;
+  display: flex;
+}
+
+.title-desc_right-desc {
+  grid-column-gap: 1.042vw;
+  grid-row-gap: 1.042vw;
+  flex-flow: column;
+  flex: 1;
+  display: flex;
+}
+
+.text-styles-256 {
+  letter-spacing: -0.104vw;
+  font-family: Garnett, sans-serif;
+  font-size: 13.333vw;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+*[tabindex]:focus-visible,
+input[type="file"]:focus-visible {
+  outline: 0.125rem solid var(--base-color-system--focus-state);
+  outline-offset: 0.125rem;
+}
+
+.inherit-color * {
+  color: inherit;
 }
