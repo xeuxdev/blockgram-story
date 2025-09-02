@@ -259,7 +259,7 @@ export function Tools() {
                 <div className="text-center mobile-short">
                   <h5 className="text-styles-h3">
                     Do you measure{" "}
-                    <span className="alt text-orange">your PR efforts?</span>
+                    <span className="alt text-red">your PR efforts?</span>
                   </h5>
                 </div>
               </div>
@@ -337,6 +337,7 @@ export function Tools() {
 
       <GraphThree />
 
+      {/* monitoring */}
       <div className="section_title-desc">
         <div className="wrapper">
           <div className="paddings">
@@ -344,7 +345,7 @@ export function Tools() {
               <div className="title-desc_left-title">
                 <h4 className="text-styles-h2">
                   What PR pros are{" "}
-                  <span className="alt text-orange">monitoring closely</span>
+                  <span className="alt text-red">monitoring closely</span>
                 </h4>
               </div>
               <div className="title-desc_right-desc">
@@ -354,7 +355,7 @@ export function Tools() {
                 </div>
                 <div className="text-styles-content">
                   In the age where information moves at lightning speed,{" "}
-                  <span className="text-orange">
+                  <span className="text-red">
                     <strong>43%</strong>
                   </span>{" "}
                   of PR professionals are still opting out of using media
@@ -369,6 +370,47 @@ export function Tools() {
           </div>
         </div>
       </div>
+
+      {/* type of media */}
+      <MediaChart />
+
+      {/* shift */}
+      <Shift />
+
+      {/* most valued tech */}
+      <div className="section_title-desc">
+        <div className="wrapper">
+          <div className="paddings">
+            <div className="title-desc_wrapper">
+              <div className="title-desc_left-title">
+                <h4 className="text-styles-h2">
+                  PR’s Most Valued{" "}
+                  <span className="alt text-orange">Tech&nbsp;Solutions</span>
+                </h4>
+              </div>
+              <div className="title-desc_right-desc">
+                <div className="text-styles-h4">
+                  The rising importance of analytics and&nbsp;monitoring in PR
+                </div>
+                <div className="text-styles-content">
+                  In today’s data-driven PR landscape, media databases
+                  and&nbsp;monitoring software have become essential, with{" "}
+                  <span className="text-orange">
+                    <strong>79%</strong>
+                  </span>{" "}
+                  of&nbsp;professionals finding PR analytics and reporting tools
+                  highly valuable. &nbsp;At the same time, traditional tools
+                  like press release creators and online newsrooms are falling
+                  out of favor, potentially signaling that their full potential
+                  is being underutilized.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <HowValuable />
     </section>
   );
 }
@@ -458,7 +500,7 @@ function GraphThree() {
               <div className="flex w-[49vw] text-center flex-col gap-[1.042vw]">
                 <h5 className="text-styles-h3">
                   What metrics do you consider when{" "}
-                  <span className="alt text-orange">
+                  <span className="alt text-red">
                     measuring&nbsp;the&nbsp;success of a PR campaign?
                   </span>
                 </h5>
@@ -480,7 +522,7 @@ function GraphThree() {
                       key={item}
                       className={cn(
                         "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
-                        isActive ? "bg-orange text-white" : "text-dark-purple"
+                        isActive ? "bg-red text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
@@ -502,6 +544,228 @@ function GraphThree() {
                 ) : (
                   <div className="max-h-[920px] size-full">
                     <img src="/tools-table-3.png" alt="" />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MediaChart() {
+  const [activeTab, setActiveTab] = React.useState<"2024" | "2023" | "table">(
+    "2024"
+  );
+
+  return (
+    <div className="section_graphs">
+      <div className="wrapper">
+        <div className="paddings">
+          <div className="flex flex-col gap-[4vw]">
+            {/* title */}
+            <div className="flex justify-center">
+              <div className="flex w-[49vw] text-center flex-col gap-[1.042vw]">
+                <h5 className="text-styles-h3">
+                  What type of media{" "}
+                  <span className="alt text-red">do you monitor?</span>
+                </h5>
+              </div>
+            </div>
+
+            {/* graphs */}
+            <div className="flex flex-col relative space-y-[2.5vw]">
+              {/* tablist */}
+              <div
+                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                role="tablist"
+              >
+                {(["2024", "2023", "table"] as const).map((item) => {
+                  const isActive = item === activeTab;
+
+                  return (
+                    <button
+                      key={item}
+                      className={cn(
+                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        isActive ? "bg-red text-white" : "text-dark-purple"
+                      )}
+                      role="tab"
+                      onClick={() => setActiveTab(item)}
+                    >
+                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                        {item}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* content */}
+              <div className="overflow-visible relative w-full">
+                {activeTab === "2024" ? (
+                  <div className="max-h-[595px] size-full">
+                    <img src="/tools-media-2024.png" alt="" />
+                  </div>
+                ) : activeTab === "2023" ? (
+                  <div className="max-h-[595px] size-full">
+                    <img src="/tools-media-2023.png" alt="" />
+                  </div>
+                ) : (
+                  <div className="max-h-[306px] size-full">
+                    <img src="/tools-media-table.png" alt="" />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Shift() {
+  const [activeTab, setActiveTab] = React.useState<"charts" | "table">(
+    "charts"
+  );
+
+  return (
+    <div className="section_title_desc">
+      <div className="wrapper">
+        <div className="paddings">
+          <div className="flex flex-col gap-[4vw]">
+            {/* title */}
+            <div className="flex justify-center">
+              <div className="w-[55vw] mx-auto flex text-center flex-col gap-[1.042vw]">
+                <h5 className="text-styles-h4">
+                  The shift toward data-driven precision in media monitoring
+                </h5>
+                <div className="text-styles-content">
+                  PR is becoming increasingly data-driven and professionals are
+                  moving away from Google Alerts, with usage dropping from{" "}
+                  <span className="text-red">
+                    <strong>31%</strong>
+                  </span>{" "}
+                  in 2023 to{" "}
+                  <span className="text-red">
+                    <strong>21%</strong>
+                  </span>{" "}
+                  in 2024. This decline reflects a growing preference for paid
+                  media monitoring tools that offer more detailed and reliable
+                  insights, as PR pros demand greater precision in their
+                  strategies.
+                </div>
+              </div>
+            </div>
+
+            {/* graphs */}
+            <div className="flex flex-col relative space-y-[2.5vw]">
+              {/* tablist */}
+              <div
+                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                role="tablist"
+              >
+                {(["charts", "table"] as const).map((item) => {
+                  const isActive = item === activeTab;
+
+                  return (
+                    <button
+                      key={item}
+                      className={cn(
+                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        isActive ? "bg-red text-white" : "text-dark-purple"
+                      )}
+                      role="tab"
+                      onClick={() => setActiveTab(item)}
+                    >
+                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                        {item}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* content */}
+              <div className="overflow-visible relative w-full">
+                {activeTab === "charts" ? (
+                  <div className="max-h-[615px] size-full">
+                    <img src="/tools-shift-chart.png" alt="" />
+                  </div>
+                ) : (
+                  <div className="max-h-[210ox] size-full">
+                    <img src="/tools-shift-table.png" alt="" />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HowValuable() {
+  const [activeTab, setActiveTab] = React.useState<"charts" | "table">(
+    "charts"
+  );
+
+  return (
+    <div className="section_title_desc">
+      <div className="wrapper">
+        <div className="paddings">
+          <div className="flex flex-col gap-[4vw]">
+            {/* title */}
+            <div className="flex justify-center">
+              <h5 className="text-styles-h3">
+                How valuable{" "}
+                <span className="alt text-red">
+                  do you find these solutions?
+                </span>
+              </h5>
+            </div>
+
+            {/* graphs */}
+            <div className="flex flex-col relative space-y-[2.5vw]">
+              {/* tablist */}
+              <div
+                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                role="tablist"
+              >
+                {(["charts", "table"] as const).map((item) => {
+                  const isActive = item === activeTab;
+
+                  return (
+                    <button
+                      key={item}
+                      className={cn(
+                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        isActive ? "bg-red text-white" : "text-dark-purple"
+                      )}
+                      role="tab"
+                      onClick={() => setActiveTab(item)}
+                    >
+                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                        {item}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* content */}
+              <div className="overflow-visible relative w-full">
+                {activeTab === "charts" ? (
+                  <div className="max-h-[938px] size-full">
+                    <img src="/tools-val-chart.png" alt="" />
+                  </div>
+                ) : (
+                  <div className="max-h-[685px] size-full">
+                    <img src="/tools-val-table.png" alt="" />
                   </div>
                 )}
               </div>

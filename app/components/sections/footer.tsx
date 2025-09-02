@@ -1,9 +1,6 @@
-import React from "react";
-
 export function Footer() {
   return (
     <footer
-      data-w-id="f587807f-63fe-0333-bbd6-10f1eb0414d6"
       className="footer-wrapper"
       style={{
         opacity: 1,

@@ -1,5 +1,3 @@
-import React from "react";
-
 export function Introduction() {
   return (
     <section className="flex flex-col gap-[1.563vw]" id="introduction">
@@ -8,17 +6,17 @@ export function Introduction() {
           <div className="flex flex-col gap-[1.667vw] pl-[4.167vw]">
             <div className="hero_title">
               <h1 className="text-[6.667vw]/[100%] font-medium -tracking-[0.068vw]">
-                The State of&nbsp;PR
+                Blockgram
               </h1>
               <h2 className="text-[6.667vw]/[100%] -tracking-[0.068vw] font-ter">
-                Technology <br />
-                2024
+                The Telegram you love <br />
+                only smarter
               </h2>
             </div>
             <div className="text-[1.563vw]/[125%]">
-              A complete overview of trends
+              Familiar design, but with AI, better UX,
               <br />
-              &amp; pain points in public relations software
+              &amp; and built-in features you always wished <br /> Telegram had.
             </div>
           </div>
 
@@ -41,26 +39,27 @@ export function Introduction() {
           <div className="paddings">
             <div className="flex flex-col gap-[1.667vw]">
               <div className="text-styles-h4 secondary">
-                PR is rapidly shifting towards an ROI-driven model, with growing
-                pressure to deliver measurable results that directly impact the
-                bottom line.
+                Telegram changed how we connect, but it never solved the real
+                problems. Scam bots, noisy notifications, forgotten chats, and
+                clunky add-ons continue to frustrate millions of users every
+                day.
               </div>
               <div className="text-styles-h4 secondary">
                 Our study reveals that over{" "}
-                <span counter-element="number" className="number-counter">
-                  57
-                </span>
-                <strong>
-                  % of PR professionals are struggling with tight budgets
+                <strong counter-element="number" className="number-counter">
+                  60
                 </strong>
-                , pushing them to embrace advanced tools and data-driven
-                strategies. With an emphasis on sales metrics in&nbsp;PR
-                measurement rising sharply, the question arises: how are PR
-                practitioners adapting to the changes?
+                <strong>
+                  % of Telegram users encounter scams or spam monthly
+                </strong>
+                , forcing communities and individuals to look for safer, smarter
+                alternatives.
               </div>
               <div className="text-styles-h4 secondary">
-                Dive into our study to explore how PR is evolving to meet the
-                needs of the tech-savvy, ROI-focused landscape.
+                Blockgram is built to answer this. The same familiar interface
+                you know, now supercharged with AI that summarizes chats,
+                detects impersonators, organizes notifications, and makes
+                in-chat payments seamless.
               </div>
             </div>
           </div>

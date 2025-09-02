@@ -1,25 +1,20 @@
-import React from "react";
 import { Link } from "react-router";
-import { cn } from "~/lib/utils";
 
 const nav_links = [
   {
     number: "01",
     title: "Introduction",
     href: "#introduction",
-    color: "light-purple",
   },
   {
     number: "02",
     title: "Table of Contents",
     href: "#table",
-    color: "light-purple",
   },
   {
     number: "03",
     title: "Key Findings",
     href: "#keys",
-    color: "light-purple",
   },
   {
     number: "04",
@@ -49,7 +44,6 @@ const nav_links = [
     number: "08",
     title: "About Prowly",
     href: "#prowly",
-    color: "light-purple",
   },
 ];
 
@@ -74,9 +68,7 @@ export function TableOfContent() {
                 <Link
                   to={link.href}
                   key={link.number}
-                  className={
-                    "rounded-[1.25vw] flex transition-all duration-250 p-[1.667vw] size-[16vw] justify-between flex-col border-[0.104vw] border-dark-purple text-dark-purple hover:text-white"
-                  }
+                  className={`rounded-[1.25vw] flex transition-all duration-250 p-[1.667vw] size-[16vw] justify-between flex-col border-[0.104vw] border-dark-purple text-dark-purple  hover:bg-light-purple hover:text-white nav-card ${link.color}`}
                 >
                   <div className="text-styles-h4">{link.number}</div>
                   <div className="text-styles-h4">{link.title}</div>

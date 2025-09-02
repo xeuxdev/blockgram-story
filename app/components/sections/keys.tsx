@@ -17,6 +17,7 @@ export function Keys() {
         <div className="wrapper">
           <div className="paddings">
             <div className="flex flex-col gap-[2.5vw]">
+              {/* desktop */}
               <div className="cursor-grab pr-[7.5vw] max-md:hidden overflow-scroll">
                 <div
                   className="flex gap-[1.042vw]"
@@ -79,29 +80,6 @@ export function Keys() {
                         <strong>71%.</strong>
                       </div>
                     </div>
-                    {/* <div className="swiper-slide_quiz-wrap">
-                      <div className="text-styles-h3">
-                        Did you struggle with&nbsp;a tight budget this year?
-                      </div>
-                      <div className="swiper-slide_quiz-btns">
-                        <div
-                          data-w-id="9df49a05-551f-f2d6-d4e1-0da8c4edc6ea"
-                          className="button color-purple primal"
-                        >
-                          <div className="text-[1.042vw]/[145%] font-sec font-medium bold">
-                            Yes
-                          </div>
-                        </div>
-                        <div
-                          data-w-id="08f3730a-b627-70b5-87b1-8f71b667dfdc"
-                          className="button color-purple secondary"
-                        >
-                          <div className="text-[1.042vw]/[145%] font-sec font-medium bold">
-                            No
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
                   </div>
                   <div
                     className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
@@ -254,9 +232,9 @@ export function Keys() {
               </div>
 
               {/* mobile */}
-              <div className="slider-mobile md:hidden">
-                <div className="swiper-wrapper">
-                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none">
+              <div className="slider-mobile w-full md:hidden">
+                <div className="flex flex-col">
+                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
                       src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebeb9cd3a09bec94bb2b_keys%201.svg"
                       loading="eager"
@@ -284,7 +262,7 @@ export function Keys() {
                       </div>
                     </div>
                   </div>
-                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none">
+                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
                       src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf167b7ceeee72754d5_keys%202.svg"
                       loading="eager"
@@ -326,7 +304,7 @@ export function Keys() {
                       </div>
                     </div>
                   </div>
-                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none">
+                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
                       src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf13e006924d0bcd21c_keys%203.svg"
                       loading="eager"
@@ -345,7 +323,7 @@ export function Keys() {
                       </div>
                     </div>
                   </div>
-                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none">
+                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
                       src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf0294029c68369188c_keys%204.svg"
                       loading="eager"
@@ -366,7 +344,7 @@ export function Keys() {
                       </div>
                     </div>
                   </div>
-                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none">
+                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
                       src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf1fb5adca466b6a3d6_keys%205.svg"
                       loading="eager"
@@ -386,7 +364,7 @@ export function Keys() {
                       </div>
                     </div>
                   </div>
-                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none">
+                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
                       src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf131dddb6b6aab1d66_keys%206.svg"
                       loading="eager"
@@ -408,7 +386,7 @@ export function Keys() {
                       </div>
                     </div>
                   </div>
-                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none">
+                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
                       src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf1c9641341b4c3b8c6_keys%207.svg"
                       loading="eager"
@@ -428,7 +406,7 @@ export function Keys() {
                       </div>
                     </div>
                   </div>
-                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none">
+                  <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
                       src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf159544a6d0fb938c9_keys%208.svg"
                       loading="eager"

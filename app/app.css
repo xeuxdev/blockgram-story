@@ -102,6 +102,29 @@ body {
   }
 }
 
+.nav-card {
+  &.red {
+    &:hover {
+      background-color: var(--red);
+    }
+  }
+  &.green {
+    &:hover {
+      background-color: var(--green);
+    }
+  }
+  &.blue {
+    &:hover {
+      background-color: var(--blue);
+    }
+  }
+  &.purple {
+    &:hover {
+      background-color: var(--purple);
+    }
+  }
+}
+
 .paddings {
   padding-inline: 4.167vw;
 }
@@ -119,7 +142,7 @@ body {
 }
 
 .text-styles-h4 {
-  @apply text-[1.563vw]/[125%] relative;
+  @apply text-[1.563vw]/[125%] relative font-main;
 
   &.secondary {
     @apply font-sec;
