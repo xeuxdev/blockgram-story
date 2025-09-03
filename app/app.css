@@ -82,6 +82,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+button {
+  cursor: pointer;
+}
+
 .image {
   z-index: 1;
   position: relative;
