@@ -4,7 +4,7 @@ export function Next() {
   return (
     <motion.section
       id="next"
-      className="flex flex-col gap-[1.563vw]"
+      className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]"
       initial={{ y: 80 }}
       whileInView={{ y: 0 }}
       viewport={{ once: true }}
@@ -84,9 +84,9 @@ export function Next() {
       >
         <div className="wrapper overflow-visible!">
           <div className="paddings">
-            <div className="flex justify-between items-stretch">
+            <div className="flex max-md:flex-col max-md:gap-[10.256vw] justify-between items-stretch">
               {/* left */}
-              <div className="relative w-[32.604vw]">
+              <div className="relative md:w-[32.604vw]">
                 <div className="flex flex-col sticky top-[4vw] gap-[1.25vw]">
                   <div className="text-styles-h2">
                     How Will PR Professionals' Roles Change Next Year?
@@ -98,38 +98,38 @@ export function Next() {
               </div>
 
               {/* cards list */}
-              <div className="flex flex-col w-[34.167vw] gap-[2.5vw] h-full">
-                <div className="bg-blue flex flex-col p-[1.667vw] rounded-[1.25vw] text-white border-[0.104vw] border-dark-purple gap-[1.667vw] sticky top-[4vw] -rotate-2">
+              <div className="flex flex-col md:w-[34.167vw] gap-[4vw] md:gap-[2.5vw] h-full">
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] -rotate-2">
                   <div className="text-styles-h4">01</div>
                   <div className="text-styles-h4">
                     Balancing AI Integration with Human Creativity
                   </div>
                 </div>
-                <div className="bg-blue flex flex-col p-[1.667vw] rounded-[1.25vw] text-white border-[0.104vw] border-dark-purple gap-[1.667vw] sticky top-[4vw] rotate-2">
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
                   <div className="text-styles-h4">02</div>
                   <div className="text-styles-h4">
                     Prioritizing Strategic and Creative Skills
                   </div>
                 </div>
-                <div className="bg-blue flex flex-col p-[1.667vw] rounded-[1.25vw] text-white border-[0.104vw] border-dark-purple gap-[1.667vw] sticky top-[4vw] -rotate-2">
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] -rotate-2">
                   <div className="text-styles-h4">03</div>
                   <div className="text-styles-h4">
                     Increased Focus on Relationship Management
                   </div>
                 </div>
-                <div className="bg-blue flex flex-col p-[1.667vw] rounded-[1.25vw] text-white border-[0.104vw] border-dark-purple gap-[1.667vw] sticky top-[4vw] rotate-2">
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
                   <div className="text-styles-h4">04</div>
                   <div className="text-styles-h4">
                     Attention on AI's Impact on PR Quality
                   </div>
                 </div>
-                <div className="bg-blue flex flex-col p-[1.667vw] rounded-[1.25vw] text-white border-[0.104vw] border-dark-purple gap-[1.667vw] sticky top-[4vw] -rotate-2">
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] -rotate-2">
                   <div className="text-styles-h4">05</div>
                   <div className="text-styles-h4">
                     The Critical Role of Adaptation and Skill Development
                   </div>
                 </div>
-                <div className="bg-blue flex flex-col p-[1.667vw] rounded-[1.25vw] text-white border-[0.104vw] border-dark-purple gap-[1.667vw] sticky top-[4vw] rotate-2">
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
                   <div className="text-styles-h4">06</div>
                   <div className="text-styles-h4">
                     Shifting PR Roles Towards ROI-Driven Responsibilities
