@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "~/lib/utils";
+import { motion } from "framer-motion";
 
 export function Tools() {
   const [activeTab, setActiveTab] = React.useState<"charts" | "table">(
@@ -7,7 +8,14 @@ export function Tools() {
   );
 
   return (
-    <section id="tools" className="flex flex-col gap-[1.563vw] relative">
+    <motion.section
+      id="tools"
+      className="flex flex-col gap-[1.563vw] relative"
+      initial={{ y: 80 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <img
         src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d891b9b6336e27451858f3_pc.svg"
         loading="lazy"
@@ -15,7 +23,13 @@ export function Tools() {
         className="z-10 absolute inset-[4vw_1vw_auto_auto] w-[10vw]"
       />
 
-      <div className="section_title">
+      <motion.div
+        className="section_title"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper small text-white bg-red">
           <div className="text-center">
             <h3 className="text-styles-h1">
@@ -23,9 +37,15 @@ export function Tools() {
             </h3>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="section_title-desc">
+      <motion.div
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex gap-[1.042vw] flex-col md:flex-row">
@@ -72,9 +92,15 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="section_graphs">
+      <motion.div
+        className="section_graphs"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex flex-col gap-[4vw]">
@@ -161,11 +187,24 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <GraphTwo />
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <GraphTwo />
+      </motion.div>
 
-      <div className="section_title-desc">
+      <motion.div
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper">
@@ -207,10 +246,16 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* impact */}
-      <div className="section_title-desc">
+      <motion.div
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper">
@@ -247,11 +292,17 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* measure */}
 
-      <div className="section_many-graphs">
+      <motion.div
+        className="section_many-graphs"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex flex-col gap-[3.125vw]">
@@ -272,10 +323,16 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* metrics that matter */}
-      <div className="section_title-desc">
+      <motion.div
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper items-center">
@@ -333,12 +390,25 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <GraphThree />
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <GraphThree />
+      </motion.div>
 
       {/* monitoring */}
-      <div className="section_title-desc">
+      <motion.div
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper">
@@ -369,16 +439,36 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* type of media */}
-      <MediaChart />
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <MediaChart />
+      </motion.div>
 
       {/* shift */}
-      <Shift />
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <Shift />
+      </motion.div>
 
       {/* most valued tech */}
-      <div className="section_title-desc">
+      <motion.div
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper">
@@ -408,10 +498,17 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <HowValuable />
-    </section>
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <HowValuable />
+      </motion.div>
+    </motion.section>
   );
 }
 

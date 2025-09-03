@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "~/lib/utils";
+import { motion } from "framer-motion";
 
 export function PainPoints() {
   const [activeTab, setActiveTab] = React.useState("charts");
@@ -14,15 +15,27 @@ export function PainPoints() {
         className="absolute inset-[30vw_-7vw_auto_auto] w-[27vw] pointer-events-none align-middle inline-block max-w-full z-10"
       />
 
-      <div className="section_title">
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="section_title"
+      >
         <div className="wrapper small text-white bg-purple">
           <div className="text-center">
             <h3 className="text-styles-h1">Pain Points in&nbsp;PR</h3>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="text-dark-purple">
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-dark-purple"
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex gap-[1.042vw]">
@@ -60,9 +73,15 @@ export function PainPoints() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="section_graphs">
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="section_graphs"
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex flex-col gap-[4vw]">
@@ -141,9 +160,15 @@ export function PainPoints() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <section className="text-dark-purple">
+      <motion.section
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-dark-purple"
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex gap-[1.042vw]">
@@ -200,9 +225,15 @@ export function PainPoints() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <div className="section_graphs">
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="section_graphs"
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex flex-col gap-[4vw]">
@@ -270,7 +301,7 @@ export function PainPoints() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 
 const nav_links = [
   {
@@ -50,7 +51,13 @@ const nav_links = [
 export function TableOfContent() {
   return (
     <section id="table" className="flex flex-col gap-[1.563vw]">
-      <section className="text-dark-purple">
+      <motion.section
+        className="text-dark-purple"
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper small bg-[#cfc9e1]">
           <div className="text-center">
             <h3 className="text-styles-h1">
@@ -58,26 +65,39 @@ export function TableOfContent() {
             </h3>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="section_nav">
+      <motion.section
+        className="section_nav"
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex justify-between flex-wrap gap-[1.042vw]">
-              {nav_links.map((link) => (
-                <Link
-                  to={link.href}
+              {nav_links.map((link, index) => (
+                <motion.div
                   key={link.number}
-                  className={`rounded-[1.25vw] flex transition-all duration-250 p-[1.667vw] size-[16vw] justify-between flex-col border-[0.104vw] border-dark-purple text-dark-purple  hover:bg-light-purple hover:text-white nav-card ${link.color}`}
+                  initial={{ y: 80, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                 >
-                  <div className="text-styles-h4">{link.number}</div>
-                  <div className="text-styles-h4">{link.title}</div>
-                </Link>
+                  <Link
+                    to={link.href}
+                    className={`rounded-[1.25vw] flex transition-all duration-250 p-[1.667vw] size-[16vw] justify-between flex-col border-[0.104vw] border-dark-purple text-dark-purple  hover:bg-light-purple hover:text-white nav-card ${link.color}`}
+                  >
+                    <div className="text-styles-h4">{link.number}</div>
+                    <div className="text-styles-h4">{link.title}</div>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </section>
   );
 }

@@ -1,15 +1,33 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="prowly" className="flex flex-col gap-[1.563vw]">
-      <div className="wrapper small bg-[#cfc9e1]">
+    <motion.section
+      id="prowly"
+      className="flex flex-col gap-[1.563vw]"
+      initial={{ y: 80 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.div
+        className="wrapper small bg-[#cfc9e1]"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="text-center">
           <h3 className="text-styles-h1">About Prowly</h3>
         </div>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="w-[55vw] flex flex-col gap-[1.667vw]">
@@ -52,7 +70,7 @@ export function About() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

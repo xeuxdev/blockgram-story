@@ -1,9 +1,17 @@
 import React from "react";
 import { cn } from "~/lib/utils";
+import { motion } from "framer-motion";
 
 export function AISection() {
   return (
-    <section id="ai" className="flex flex-col gap-[1.563vw] relative">
+    <motion.section
+      id="ai"
+      className="flex flex-col gap-[1.563vw] relative"
+      initial={{ y: 80 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <img
         src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66dae4640e8f1f59e6564cfe_ai%20robot.svg"
         loading="lazy"
@@ -18,7 +26,13 @@ export function AISection() {
         className="pointer-events-none w-[16vw] top-[25.6vw] left-auto right-0 absolute inset-[25vw_auto_auto_16vw]"
       />
 
-      <section className="section_title">
+      <motion.section
+        className="section_title"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper small bg-green text-white">
           <div className="text-center">
             <h3 className="text-styles-h1">
@@ -26,9 +40,15 @@ export function AISection() {
             </h3>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="section_title-desc">
+      <motion.section
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper">
@@ -78,11 +98,24 @@ export function AISection() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <WhatDoYouUse />
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <WhatDoYouUse />
+      </motion.div>
 
-      <section className="section_title-desc">
+      <motion.section
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper center">
@@ -117,11 +150,24 @@ export function AISection() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <BiggestThreat />
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <BiggestThreat />
+      </motion.div>
 
-      <section className="section_title-desc">
+      <motion.section
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper center">
@@ -155,11 +201,24 @@ export function AISection() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <BiggestPerks />
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <BiggestPerks />
+      </motion.div>
 
-      <section className="section_title-desc">
+      <motion.section
+        className="section_title-desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="title-desc_wrapper">
@@ -188,10 +247,17 @@ export function AISection() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <Skills />
-    </section>
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <Skills />
+      </motion.div>
+    </motion.section>
   );
 }
 

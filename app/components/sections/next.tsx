@@ -1,15 +1,36 @@
+import { motion } from "framer-motion";
+
 export function Next() {
   return (
-    <section id="next" className="flex flex-col gap-[1.563vw]">
-      <div className="section_title">
+    <motion.section
+      id="next"
+      className="flex flex-col gap-[1.563vw]"
+      initial={{ y: 80 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.div
+        className="section_title"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper small bg-blue text-white">
           <div className="text-center">
             <h3 className="text-styles-h1">What’s Next in&nbsp;PR Tech</h3>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="section_desc text-dark-purple">
+      <motion.div
+        className="section_desc text-dark-purple"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="desc-wrapper">
@@ -24,9 +45,15 @@ export function Next() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="section_desc">
+      <motion.div
+        className="section_desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="mt-[3vw] rounded-[1.667vw] overflow-hidden">
@@ -44,11 +71,17 @@ export function Next() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* cards */}
 
-      <div className="section_cards block">
+      <motion.div
+        className="section_cards block"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper overflow-visible!">
           <div className="paddings">
             <div className="flex justify-between items-stretch">
@@ -106,9 +139,15 @@ export function Next() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="section_desc">
+      <motion.div
+        className="section_desc"
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex flex-col gap-[1.667vw]">
@@ -129,7 +168,7 @@ export function Next() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

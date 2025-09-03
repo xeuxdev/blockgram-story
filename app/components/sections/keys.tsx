@@ -1,9 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export function Keys() {
   return (
     <section id="keys" className="flex flex-col gap-[1.563vw]">
-      <div className="section_title text-dark-purple">
+      <motion.div
+        className="section_title text-dark-purple"
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="wrapper small bg-[#cfc9e1]">
           <div className="text-center">
             <h3 className="text-styles-h1">
@@ -11,14 +18,26 @@ export function Keys() {
             </h3>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <section className="section_keys">
+      <motion.section
+        className="section_keys"
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex flex-col gap-[2.5vw]">
               {/* desktop */}
-              <div className="cursor-grab pr-[7.5vw] max-md:hidden overflow-scroll">
+              <motion.div
+                className="cursor-grab pr-[7.5vw] max-md:hidden overflow-scroll"
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
                 <div
                   className="flex gap-[1.042vw]"
                   style={{
@@ -229,10 +248,16 @@ export function Keys() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* mobile */}
-              <div className="slider-mobile w-full md:hidden">
+              <motion.div
+                className="slider-mobile w-full md:hidden"
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
                 <div className="flex flex-col">
                   <div className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-full flex-none">
                     <img
@@ -428,11 +453,15 @@ export function Keys() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className="bg-white w-full h-[.729vw] rounded-full"
                 id="track0"
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <div
                   className="w-[10%] h-full bg-dark-purple cursor-grabbing rounded-full perspective-[1000px] backface-hidden"
@@ -440,11 +469,11 @@ export function Keys() {
                     transform: "translateX(0px)",
                   }}
                 ></div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </section>
   );
 }

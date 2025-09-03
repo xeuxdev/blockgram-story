@@ -1,7 +1,14 @@
+import { motion } from "framer-motion";
+
 export function Introduction() {
   return (
     <section className="flex flex-col gap-[1.563vw]" id="introduction">
-      <section>
+      <motion.section
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <div className="wrapper bg-[#ac93be] h-[44.583vw]">
           <div className="flex flex-col gap-[1.667vw] pl-[4.167vw]">
             <div className="hero_title">
@@ -26,15 +33,25 @@ export function Introduction() {
             className="absolute bottom-0 -right-3 size-[35vw]"
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="">
+      <motion.section
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
         <div className="wrapper small bg-[#cfc9e1]">
           <h3 className="text-styles-h1 text-center">Introduction</h3>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="text-dark-purple">
+      <motion.section
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
         <div className="wrapper">
           <div className="paddings">
             <div className="flex flex-col gap-[1.667vw]">
@@ -64,7 +81,7 @@ export function Introduction() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </section>
   );
 }
