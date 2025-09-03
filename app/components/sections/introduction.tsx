@@ -2,35 +2,37 @@ import { motion } from "framer-motion";
 
 export function Introduction() {
   return (
-    <section className="flex flex-col gap-[1.563vw]" id="introduction">
+    <section
+      className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]"
+      id="introduction"
+    >
       <motion.section
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="wrapper bg-[#ac93be] h-[44.583vw]">
-          <div className="flex flex-col gap-[1.667vw] pl-[4.167vw]">
+        <div className="wrapper bg-[#ac93be] h-[210vw] md:h-[44.583vw]">
+          <div className="flex flex-col gap-[5.128vw] px-[6.154vw] md:gap-[1.667vw] pl-[4.167vw] max-md:pt-[16.4vw]">
             <div className="hero_title">
-              <h1 className="text-[6.667vw]/[100%] font-medium -tracking-[0.068vw]">
+              <h1 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] font-medium -tracking-[0.068vw]">
                 Blockgram
               </h1>
-              <h2 className="text-[6.667vw]/[100%] -tracking-[0.068vw] font-ter">
+              <h2 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] -tracking-[0.068vw] font-ter">
                 The Telegram you love <br />
                 only smarter
               </h2>
             </div>
-            <div className="text-[1.563vw]/[125%]">
-              Familiar design, but with AI, better UX,
-              <br />
-              &amp; and built-in features you always wished <br /> Telegram had.
+            <div className="text-styles-h4">
+              Familiar design, but with AI, better UX, &amp; and built-in
+              features you always wished <br /> Telegram had.
             </div>
           </div>
 
           <img
             src="/hero-image.svg"
             alt=""
-            className="absolute bottom-0 -right-3 size-[35vw]"
+            className="absolute bottom-0 -right-3 size-[120vw] md:size-[35vw]"
           />
         </div>
       </motion.section>
@@ -54,7 +56,7 @@ export function Introduction() {
       >
         <div className="wrapper">
           <div className="paddings">
-            <div className="flex flex-col gap-[1.667vw]">
+            <div className="flex flex-col gap-[4vw] md:gap-[1.667vw]">
               <div className="text-styles-h4 secondary">
                 Telegram changed how we connect, but it never solved the real
                 problems. Scam bots, noisy notifications, forgotten chats, and

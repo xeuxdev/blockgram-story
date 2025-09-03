@@ -4,7 +4,7 @@ export function About() {
   return (
     <motion.section
       id="prowly"
-      className="flex flex-col gap-[1.563vw]"
+      className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]"
       initial={{ y: 80 }}
       whileInView={{ y: 0 }}
       viewport={{ once: true }}
@@ -30,7 +30,7 @@ export function About() {
       >
         <div className="wrapper">
           <div className="paddings">
-            <div className="w-[55vw] flex flex-col gap-[1.667vw]">
+            <div className="md:w-[55vw] flex flex-col gap-[1.667vw]">
               <div className="text-styles-h4">
                 We’re a technology company that has created an all-in-one public
                 relations management platform that helps growth-oriented
@@ -61,11 +61,9 @@ export function About() {
               <a
                 href="https://prowly.com/"
                 target="_blank"
-                className="bg-blue text-white uppercase cursor-pointer rounded-full py-[0.625vw] px-[2.5vw] duration-200 transition-all inline-block w-fit"
+                className="bg-blue text-white uppercase cursor-pointer rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw] duration-200 transition-all inline-block w-fit"
               >
-                <div className="text-[1.042vw]/[145%] font-sec font-bold">
-                  LEARN MORE
-                </div>
+                <div className="text-styles-content font-bold">LEARN MORE</div>
               </a>
             </div>
           </div>

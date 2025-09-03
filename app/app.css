@@ -100,6 +100,17 @@ body {
   &.small {
     padding-block: 2.083vw;
   }
+
+  @media screen and (max-width: 478px) {
+    border-radius: 5.128vw;
+    border-width: 0.513vw;
+
+    padding-block: 10.256vw;
+
+    &.small {
+      padding-block: 6.154vw;
+    }
+  }
 }
 
 .nav-card {
@@ -127,22 +138,26 @@ body {
 
 .paddings {
   padding-inline: 4.167vw;
+
+  @media screen and (max-width: 768px) {
+    padding-inline: 8.205vw;
+  }
 }
 
 .text-styles-h1 {
-  @apply text-[5vw]/[100%] -tracking-[0.052vw] font-main;
+  @apply text-[12vw]/[110%] md:text-[5vw]/[100%] -tracking-[0.052vw] font-main;
 }
 
 .text-styles-h2 {
-  @apply text-[3.333vw]/[115%] -tracking-[0.031vw] font-main;
+  @apply text-[8.205vw]/[115%] md:text-[3.333vw]/[115%] -tracking-[0.031vw] font-main;
 }
 
 .text-styles-h3 {
-  @apply text-[2.5vw]/[115%] -tracking-[0.026vw] font-main;
+  @apply text-[6.154vw]/[115%] md:text-[2.5vw]/[115%] -tracking-[0.026vw] font-main;
 }
 
 .text-styles-h4 {
-  @apply text-[1.563vw]/[125%] relative font-main;
+  @apply text-[4.615vw]/[145%] md:text-[1.563vw]/[125%] relative font-main;
 
   &.secondary {
     @apply font-sec;
@@ -150,7 +165,7 @@ body {
 }
 
 .text-styles-content {
-  @apply font-medium text-[1.042vw]/[145%] font-sec;
+  @apply font-medium text-[4.103vw]/[145%] sm:text-[1.042vw]/[145%] font-sec;
 }
 
 .alt {
@@ -162,6 +177,11 @@ body {
   grid-row-gap: 1.042vw;
   flex-flow: row;
   display: flex;
+
+  @media screen and (max-width: 478px) {
+    flex-direction: column;
+    gap: 4.103vw;
+  }
 }
 
 .title-desc_left-title {
@@ -170,6 +190,11 @@ body {
   flex-flow: column;
   width: 35.365vw;
   display: flex;
+
+  @media screen and (max-width: 478px) {
+    width: 100%;
+    gap: 4.103vw;
+  }
 }
 
 .title-desc_right-desc {
@@ -186,6 +211,10 @@ body {
   font-size: 13.333vw;
   font-weight: 400;
   line-height: 100%;
+
+  @media screen and (max-width: 478px) {
+    font-size: 30vw;
+  }
 }
 
 html.lenis {
@@ -216,4 +245,71 @@ input[type="file"]:focus-visible {
 
 .inherit-color * {
   color: inherit;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.729vw;
+  height: 0.729vw;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--dark-purple);
+  border-radius: 9999px;
+  cursor: grab;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--purple);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+/* Hide scrollbar arrows/buttons */
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:start:decrement,
+.custom-scrollbar::-webkit-scrollbar-button:end:increment {
+  display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox scrollbar support */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-purple) white;
 }

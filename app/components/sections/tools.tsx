@@ -10,7 +10,7 @@ export function Tools() {
   return (
     <motion.section
       id="tools"
-      className="flex flex-col gap-[1.563vw] relative"
+      className="flex flex-col gap-[2.564vw] md:gap-[1.563vw] relative"
       initial={{ y: 80 }}
       whileInView={{ y: 0 }}
       viewport={{ once: true }}
@@ -20,7 +20,7 @@ export function Tools() {
         src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d891b9b6336e27451858f3_pc.svg"
         loading="lazy"
         alt=""
-        className="z-10 absolute inset-[4vw_1vw_auto_auto] w-[10vw]"
+        className="z-10 absolute top-[52vw] -right-[2vw] md:inset-[4vw_1vw_auto_auto] w-[25vw] md:w-[10vw]"
       />
 
       <motion.div
@@ -48,8 +48,8 @@ export function Tools() {
       >
         <div className="wrapper">
           <div className="paddings">
-            <div className="flex gap-[1.042vw] flex-col md:flex-row">
-              <div className="flex flex-col w-[35.365vw] gap-[1.042vw]">
+            <div className="flex gap-[4.103vw] md:gap-[1.042vw] flex-col md:flex-row">
+              <div className="flex flex-col md:w-[35.365vw] gap-[4.103vw] md:gap-[1.042vw]">
                 <h4 className="text-styles-h2">
                   PR Tool Adoption Rises,{" "}
                   <span className="alt text-orange">
@@ -57,7 +57,7 @@ export function Tools() {
                   </span>
                 </h4>
               </div>
-              <div className="flex flex-col gap-[1.042vw] flex-1">
+              <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] flex-1">
                 <div className="text-styles-h4">
                   The PR tool divide: agencies embrace,
                   solos&nbsp;lag&nbsp;behind
@@ -106,7 +106,7 @@ export function Tools() {
             <div className="flex flex-col gap-[4vw]">
               {/* title */}
               <div className="flex justify-center">
-                <div className="flex w-[49vw] text-center flex-col gap-[1.042vw]">
+                <div className="flex md:w-[49vw] text-center flex-col gap-[4.103vw] md:gap-[1.042vw]">
                   <h5 className="text-styles-h3">
                     Do you currently use{" "}
                     <span className="alt text-orange">
@@ -120,7 +120,7 @@ export function Tools() {
               <div className="flex flex-col relative space-y-[2.5vw]">
                 {/* tablist */}
                 <div
-                  className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                  className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                   role="tablist"
                 >
                   {(["charts", "table"] as const).map((item) => {
@@ -130,13 +130,13 @@ export function Tools() {
                       <button
                         key={item}
                         className={cn(
-                          "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                          "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                           isActive ? "bg-orange text-white" : "text-dark-purple"
                         )}
                         role="tab"
                         onClick={() => setActiveTab(item)}
                       >
-                        <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                        <span className="font-bold text-styles-content capitalize">
                           {item}
                         </span>
                       </button>
@@ -159,7 +159,7 @@ export function Tools() {
               </div>
 
               {/* under */}
-              <div className="flex flex-col gap-[1.042vw] *:text-center mt-[2vw] w-[52vw] mx-auto">
+              <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] *:md:text-center mt-[2vw] md:w-[52vw] mx-auto">
                 <div className="text-styles-h4">
                   While budget constraints still hold back{" "}
                   <span>
@@ -337,23 +337,23 @@ export function Tools() {
           <div className="paddings">
             <div className="title-desc_wrapper items-center">
               <div className="title-desc_left-title">
-                <div className="bg-white rounded-[1.667vw] w-[34vw] p-[1.667vw]">
-                  <div className="flex items-baseline gap-[0.521vw] text-[#ffb5a5] text-[7vw]/[115%]">
+                <div className="bg-white rounded-[1.667vw] w-full sm:w-[34vw] p-[1.667vw]">
+                  <div className="flex items-baseline gap-[0.521vw] text-[#ffb5a5] text-[19vw] sm:text-[7vw]/[115%]">
                     <span counter-element="number" className="text-styles-176">
                       13
                     </span>
                     <span className="text-styles-176">%</span>
-                    <span className="text-[2.083vw] -tracking-[0.104vw]">
+                    <span className="text-[4.103vw] md:text-[2.083vw] -tracking-[0.104vw]">
                       in 2023
                     </span>
                   </div>
-                  <div className="flex items-baseline gap-[0.521vw] pl-[1vw] text-[7vw]/[115%] text-red">
+                  <div className="flex items-baseline gap-[0.521vw] pl-[1vw] text-[19vw] sm:text-[7vw]/[115%] text-red">
                     <div className="text-styles-176">→</div>
                     <div counter-element="number" className="text-styles-176">
                       19
                     </div>
                     <div className="text-styles-176">%</div>
-                    <div className="text-[2.083vw] -tracking-[0.104vw]">
+                    <div className="text-[4.103vw] md:text-[2.083vw] -tracking-[0.104vw]">
                       in 2024
                     </div>
                   </div>
@@ -524,7 +524,7 @@ function GraphTwo() {
           <div className="flex flex-col gap-[4vw]">
             {/* title */}
             <div className="flex justify-center">
-              <div className="flex w-[49vw] text-center flex-col gap-[1.042vw]">
+              <div className="flex md:w-[49vw] text-center flex-col gap-[4.103vw] md:gap-[1.042vw]">
                 <h5 className="text-styles-h3">
                   What are the primary reasons why <br />
                   <span className="alt text-orange">
@@ -538,7 +538,7 @@ function GraphTwo() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["charts", "table"] as const).map((item) => {
@@ -548,13 +548,13 @@ function GraphTwo() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-orange text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>
@@ -594,7 +594,7 @@ function GraphThree() {
           <div className="flex flex-col gap-[4vw]">
             {/* title */}
             <div className="flex justify-center">
-              <div className="flex w-[49vw] text-center flex-col gap-[1.042vw]">
+              <div className="flex md:w-[49vw] text-center flex-col gap-[4.103vw] md:gap-[1.042vw]">
                 <h5 className="text-styles-h3">
                   What metrics do you consider when{" "}
                   <span className="alt text-red">
@@ -608,7 +608,7 @@ function GraphThree() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["charts", "table"] as const).map((item) => {
@@ -618,13 +618,13 @@ function GraphThree() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-red text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>
@@ -664,7 +664,7 @@ function MediaChart() {
           <div className="flex flex-col gap-[4vw]">
             {/* title */}
             <div className="flex justify-center">
-              <div className="flex w-[49vw] text-center flex-col gap-[1.042vw]">
+              <div className="flex md:w-[49vw] text-center flex-col gap-[4.103vw] md:gap-[1.042vw]">
                 <h5 className="text-styles-h3">
                   What type of media{" "}
                   <span className="alt text-red">do you monitor?</span>
@@ -676,7 +676,7 @@ function MediaChart() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["2024", "2023", "table"] as const).map((item) => {
@@ -686,13 +686,13 @@ function MediaChart() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-red text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>
@@ -736,7 +736,7 @@ function Shift() {
           <div className="flex flex-col gap-[4vw]">
             {/* title */}
             <div className="flex justify-center">
-              <div className="w-[55vw] mx-auto flex text-center flex-col gap-[1.042vw]">
+              <div className="md:w-[55vw] mx-auto flex text-center flex-col gap-[4.103vw] md:gap-[1.042vw]">
                 <h5 className="text-styles-h4">
                   The shift toward data-driven precision in media monitoring
                 </h5>
@@ -762,7 +762,7 @@ function Shift() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["charts", "table"] as const).map((item) => {
@@ -772,13 +772,13 @@ function Shift() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-red text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>
@@ -830,7 +830,7 @@ function HowValuable() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["charts", "table"] as const).map((item) => {
@@ -840,13 +840,13 @@ function HowValuable() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-red text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>

@@ -22,7 +22,7 @@ export default function Home() {
     <div className="flex py-[1.563vw] px-[1.3vw] gap-[1.563vw]">
       <Navbar />
 
-      <main className="w-full md:w-[77.604vw] bg-[#f0f0f0] text-dark-purple flex flex-col gap-[1.563vw] mt-[1.563vw]">
+      <main className="w-full max-md:pt-[17vw] md:w-[77.604vw] bg-[#f0f0f0] text-dark-purple flex flex-col gap-[2.564vw] md:gap-[1.563vw] mt-[1.563vw]">
         <Introduction />
         <TableOfContent />
         <Keys />

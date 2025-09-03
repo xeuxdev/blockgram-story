@@ -6,7 +6,7 @@ export function AISection() {
   return (
     <motion.section
       id="ai"
-      className="flex flex-col gap-[1.563vw] relative"
+      className="flex flex-col gap-[2.564vw] md:gap-[1.563vw] relative"
       initial={{ y: 80 }}
       whileInView={{ y: 0 }}
       viewport={{ once: true }}
@@ -16,14 +16,14 @@ export function AISection() {
         src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66dae4640e8f1f59e6564cfe_ai%20robot.svg"
         loading="lazy"
         alt=""
-        className="z-10 w-[13vw] absolute inset-[25vw_auto_auto_16vw]"
+        className="z-10 w-[26vw] top-[34vw] left-[6vw] md:w-[13vw] absolute md:inset-[25vw_auto_auto_16vw]"
       />
 
       <img
         src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d992f54d92de071eb94b46_pencil.svg"
         loading="lazy"
         alt=""
-        className="pointer-events-none w-[16vw] top-[25.6vw] left-auto right-0 absolute inset-[25vw_auto_auto_16vw]"
+        className="pointer-events-none w-[30vw] -right-[2vw] md:w-[16vw] top-[25.6vw] left-auto md:right-0 absolute z-10 md:inset-[25vw_auto_auto_16vw]"
       />
 
       <motion.section
@@ -33,7 +33,7 @@ export function AISection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="wrapper small bg-green text-white">
+        <div className="wrapper small bg-green text-white px-10">
           <div className="text-center">
             <h3 className="text-styles-h1">
               AI in PR: <span className="alt">Promise or Pitfall?</span>
@@ -273,7 +273,7 @@ function WhatDoYouUse() {
           <div className="flex flex-col gap-[4vw]">
             {/* title */}
             <div className="flex justify-center">
-              <div className="flex w-[49vw] text-center flex-col gap-[1.042vw]">
+              <div className="flex md:w-[49vw] text-center flex-col gap-[1.042vw]">
                 <h5 className="text-styles-h3">
                   What type of media{" "}
                   <span className="alt text-green">do you monitor?</span>
@@ -285,7 +285,7 @@ function WhatDoYouUse() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["2024", "2023", "table"] as const).map((item) => {
@@ -295,13 +295,13 @@ function WhatDoYouUse() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-green text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>
@@ -359,7 +359,7 @@ function BiggestThreat() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["charts", "table"] as const).map((item) => {
@@ -369,13 +369,13 @@ function BiggestThreat() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-green text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>
@@ -415,7 +415,7 @@ function BiggestPerks() {
           <div className="flex flex-col gap-[4vw]">
             {/* title */}
             <div className="flex justify-center">
-              <div className="flex w-[49vw] text-center flex-col gap-[1.042vw]">
+              <div className="flex md:w-[49vw] text-center flex-col gap-[1.042vw]">
                 <h5 className="text-styles-h3">
                   What are the biggest perks <br />
                   <span className="alt text-green">
@@ -429,7 +429,7 @@ function BiggestPerks() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["charts", "table"] as const).map((item) => {
@@ -439,13 +439,13 @@ function BiggestPerks() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-green text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>
@@ -485,7 +485,7 @@ function Skills() {
           <div className="flex flex-col gap-[4vw]">
             {/* title */}
             <div className="flex justify-center">
-              <div className="flex w-[63vw] text-center flex-col gap-[1.042vw]">
+              <div className="flex md:w-[63vw] text-center flex-col gap-[1.042vw]">
                 <h5 className="text-styles-h3">
                   What skills will become more important for <br />
                   <span className="alt text-green">
@@ -499,7 +499,7 @@ function Skills() {
             <div className="flex flex-col relative space-y-[2.5vw]">
               {/* tablist */}
               <div
-                className="flex p-[0.625vw] justify-center rounded-full bg-white gap-[0.417vw] relative w-fit mx-auto"
+                className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                 role="tablist"
               >
                 {(["2024", "2023", "table"] as const).map((item) => {
@@ -509,13 +509,13 @@ function Skills() {
                     <button
                       key={item}
                       className={cn(
-                        "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
+                        "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                         isActive ? "bg-green text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}
                     >
-                      <span className="font-bold font-sec text-[1.042vw]/[145%] capitalize">
+                      <span className="font-bold text-styles-content capitalize">
                         {item}
                       </span>
                     </button>

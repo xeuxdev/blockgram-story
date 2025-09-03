@@ -1,26 +1,18 @@
 export function Footer() {
   return (
-    <footer
-      className="footer-wrapper"
-      style={{
-        opacity: 1,
-        transform:
-          "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-        transformStyle: "preserve-3d",
-      }}
-    >
+    <footer className="footer-wrapper">
       <div className="wrapper py-0! bg-[#cfc9e1]">
-        <div className="flex flex-col justify-between h-[29.427vw] px-[1.563vw] pt-[1.563vw]">
-          <div className="flex justify-between pb-[1.25vw] mb-[1.25vw] border-b-[0.104vw] border-dark-purple">
-            <div className="flex items-center gap-[1.042vw] text-dark-purple uppercase">
-              <div className="font-ter text-[0.938vw]/[140%]">
+        <div className="flex flex-col justify-between h-[77.436vw] md:h-[29.427vw] px-[1.563vw] pt-[7.692vw] md:pt-[1.563vw]">
+          <div className="flex max-md:flex-col max-md:gap-[9.231vw] items-center justify-between pb-[1.25vw] mb-[1.25vw] md:border-b-[0.104vw] border-dark-purple">
+            <div className="flex items-center max-md:flex-col gap-[4.103vw] md:gap-[1.042vw] text-dark-purple uppercase">
+              <div className="font-ter text-[4.103vw] md:text-[0.938vw]/[140%]">
                 Let’s stay in touch
               </div>
-              <div className="flex gap-[1.042vw] items-center">
+              <div className="flex gap-[5.128vw] md:gap-[1.042vw] items-center">
                 <a
                   href="https://www.linkedin.com/company/prowly-com"
                   target="_blank"
-                  className="w-[1.458vw]"
+                  className="w-[7.179vw] md:w-[1.458vw]"
                 >
                   <img
                     src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1dd157c2e698c39e0cfae_LN.svg"
@@ -32,7 +24,7 @@ export function Footer() {
                 <a
                   href="https://twitter.com/Prowly_com"
                   target="_blank"
-                  className="w-[1.458vw]"
+                  className="w-[7.179vw] md:w-[1.458vw]"
                 >
                   <img
                     src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1dd15ec3e5efa0ff50975_X.svg"
@@ -44,7 +36,7 @@ export function Footer() {
                 <a
                   href="https://www.instagram.com/prowly_com/"
                   target="_blank"
-                  className="w-[1.458vw]"
+                  className="w-[7.179vw] md:w-[1.458vw]"
                 >
                   <img
                     src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1dd151b0f5c6564c13cdf_IN.svg"
@@ -56,7 +48,7 @@ export function Footer() {
                 <a
                   href="https://www.threads.net/@prowly_com"
                   target="_blank"
-                  className="w-[1.458vw]"
+                  className="w-[7.179vw] md:w-[1.458vw]"
                 >
                   <img
                     src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66e31db1c23c150da790b0b3_Threads.svg"
@@ -70,9 +62,9 @@ export function Footer() {
             <a
               href="https://go.prowly.com/pr_collective"
               target="_blank"
-              className="bg-blue text-white rounded-full py-[0.625vw] px-[2.5vw]"
+              className="bg-blue text-white rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw]"
             >
-              <div className="text-[1.042vw]/[145%] font-sec font-medium uppercase">
+              <div className="text-styles-content font-medium uppercase">
                 join the community
               </div>
             </a>
@@ -85,22 +77,24 @@ export function Footer() {
           />
         </div>
       </div>
-      <div className="mt-[1.563vw] flex justify-between items-center text-dark-purple uppercase">
-        <div className="text-[0.833vw]/[145%] font-bold font-sec">
+
+      {/* under */}
+      <div className="mt-[5.128vw] md:mt-[1.563vw] flex-col md:flex-row max-md:gap-[2.564vw] max-md:pb-[7.692vw] flex justify-between items-center text-dark-purple uppercase">
+        <div className="text-styles-content font-bold">
           © 2025 All rights reserved
         </div>
-        <div className="flex items-center gap-[1.042vw]">
+        <div className="flex max-md:flex-col items-center gap-[1.042vw]">
           <a
             href="https://prowly.com/terms-of-service/"
             target="_blank"
-            className="text-dark-purple text-[0.833vw]/[145%] font-bold font-sec"
+            className="text-dark-purple text-styles-content font-bold"
           >
             Legal info
           </a>
           <a
             href="https://prowly.com/privacy-policy/"
             target="_blank"
-            className="text-dark-purple text-[0.833vw]/[145%] font-bold font-sec"
+            className="text-dark-purple text-styles-content font-bold"
           >
             Privacy Policy
           </a>
