@@ -32,7 +32,7 @@ export function Keys() {
             <div className="flex flex-col gap-[2.5vw]">
               {/* desktop */}
               <motion.div
-                className="cursor-grab pb-[1rem] pr-[7.5vw] max-md:hidden overflow-x-scroll custom-scrollbar"
+                className=" pb-[1rem] pr-[7.5vw] max-md:hidden overflow-x-scroll custom-scrollbar"
                 initial={{ y: 80, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}

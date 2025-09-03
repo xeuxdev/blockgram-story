@@ -1,8 +1,16 @@
+import { motion } from "framer-motion";
+
 export function Footer() {
   return (
     <footer className="footer-wrapper">
       <div className="wrapper py-0! bg-[#cfc9e1]">
-        <div className="flex flex-col justify-between h-[77.436vw] md:h-[29.427vw] px-[1.563vw] pt-[7.692vw] md:pt-[1.563vw]">
+        <motion.div
+          className="flex flex-col justify-between h-[77.436vw] md:h-[29.427vw] px-[1.563vw] pt-[7.692vw] md:pt-[1.563vw]"
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <div className="flex max-md:flex-col max-md:gap-[9.231vw] items-center justify-between pb-[1.25vw] mb-[1.25vw] md:border-b-[0.104vw] border-dark-purple">
             <div className="flex items-center max-md:flex-col gap-[4.103vw] md:gap-[1.042vw] text-dark-purple uppercase">
               <div className="font-ter text-[4.103vw] md:text-[0.938vw]/[140%]">
@@ -75,11 +83,17 @@ export function Footer() {
             alt=""
             className="image footer-logo"
           />
-        </div>
+        </motion.div>
       </div>
 
       {/* under */}
-      <div className="mt-[5.128vw] md:mt-[1.563vw] flex-col md:flex-row max-md:gap-[2.564vw] max-md:pb-[7.692vw] flex justify-between items-center text-dark-purple uppercase">
+      <motion.div
+        className="mt-[5.128vw] md:mt-[1.563vw] flex-col md:flex-row max-md:gap-[2.564vw] max-md:pb-[7.692vw] flex justify-between items-center text-dark-purple uppercase"
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      >
         <div className="text-styles-content font-bold">
           © 2025 All rights reserved
         </div>
@@ -99,7 +113,7 @@ export function Footer() {
             Privacy Policy
           </a>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }
