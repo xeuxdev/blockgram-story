@@ -44,6 +44,21 @@ const nav_links = [
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Prevent body scroll when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup function to reset body overflow when component unmounts
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,6 +152,15 @@ export function Navbar() {
     }
   };
 
+  const handleMobileLinkClick = (href: string) => {
+    handleLinkClick(href);
+    setIsMobileMenuOpen(false); // Close mobile menu after navigation
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   const getDownloadButtonClasses = () => {
     const baseClasses =
       "flex justify-center items-center gap-[0.625vw] border-[0.104vw] border-dark-purple rounded-[100vw] py-[1.042vw] underline-none transition-all duration-300";
@@ -167,6 +191,118 @@ export function Navbar() {
 
   return (
     <nav>
+      {/* mobile */}
+      <div className="fixed md:hidden inset-[0%_0%_auto] flex items-center justify-between bg-white z-40 py-[2.7vw] px-[4.3vw]">
+        <a href="#introduction" className="size-10">
+          <img src="/logo.png" loading="lazy" alt="" className="image" />
+        </a>
+        <button
+          onClick={toggleMobileMenu}
+          className="w-[8vw] h-[8vw] flex items-center justify-center"
+        >
+          <img src="/hamburger.svg" loading="lazy" alt="" className="w-[8vw]" />
+        </button>
+      </div>
+
+      {/* mobile menu overlay */}
+      <div
+        className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? "transform translate-y-0 opacity-100 visible"
+            : "transform -translate-y-full opacity-0 invisible"
+        }`}
+      >
+        <div className="bg-white w-full h-full flex flex-col">
+          {/* mobile menu header */}
+          <div className="flex items-center justify-between py-[2.7vw] px-[4.3vw] border-b border-gray-200">
+            <img src="/logo.png" loading="lazy" alt="" className="size-10" />
+            <button
+              onClick={toggleMobileMenu}
+              className="flex items-center justify-center"
+            >
+              <svg
+                className="size-[10vw]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
+            </button>
+          </div>
+
+          {/* mobile menu content */}
+          <div className="flex-1 flex flex-col justify-center px-[4.3vw] gap-[2vw]">
+            {nav_links.map((link, index) => {
+              const isActive = activeSection === link.href;
+
+              return (
+                <button
+                  key={link.href}
+                  onClick={() => handleMobileLinkClick(link.href)}
+                  className={`flex items-center gap-[3vw] py-[3vw] px-[2vw] border-[0.3vw] border-dark-purple rounded-[2vw] transition-all duration-300 ${
+                    isActive
+                      ? link.color === "light-purple"
+                        ? "bg-light-purple text-dark-purple"
+                        : link.color === "purple"
+                        ? "bg-purple text-white"
+                        : link.color === "red"
+                        ? "bg-red text-white"
+                        : link.color === "green"
+                        ? "bg-green text-white"
+                        : link.color === "blue"
+                        ? "bg-blue text-white"
+                        : "bg-light-purple text-dark-purple"
+                      : "bg-transparent text-dark-purple"
+                  }`}
+                  style={{
+                    animationDelay: `${index * 50}ms`,
+                    animation: isMobileMenuOpen
+                      ? "slideInFromTop 0.3s ease-out forwards"
+                      : "none",
+                  }}
+                >
+                  <div className="font-main text-[3.5vw] font-medium leading-[145%]">
+                    {link.number}
+                  </div>
+                  <div className="font-main text-[3.5vw] font-medium leading-[145%] text-left">
+                    {link.title}
+                  </div>
+                </button>
+              );
+            })}
+
+            {/* mobile download button */}
+            <Link
+              to="https://go.prowly.com/hubfs/The%20State%20of%20PR%20Technology%202024%20by%20Prowly%20PR%20Software.pdf"
+              target="_blank"
+              className="flex justify-center items-center gap-[2vw] border-[0.3vw] border-dark-purple rounded-[100vw] py-[3vw] mt-[2vw] bg-light-purple text-dark-purple transition-all duration-300"
+              style={{
+                animationDelay: `${nav_links.length * 50}ms`,
+                animation: isMobileMenuOpen
+                  ? "slideInFromTop 0.3s ease-out forwards"
+                  : "none",
+              }}
+            >
+              <div className="font-main text-[3.5vw] font-medium leading-[145%]">
+                DOWNLOAD PDF
+              </div>
+              <div className="size-[3vw] flex items-center justify-center">
+                <svg
+                  width="100%"
+                  height="auto"
+                  viewBox="0 0 18 25"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M13 11.5H18L9 21.5L0 11.5H5V0.5H13V11.5ZM14 22.5H4V24.5H14V22.5Z"></path>
+                </svg>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* desktop */}
       <div className="flex sticky top-[1.5vw] h-auto w-[18vw] flex-col gap-[.5vw] max-md:hidden">
         <Link to="#" className="inline-block">
           <img

@@ -50,7 +50,10 @@ const nav_links = [
 
 export function TableOfContent() {
   return (
-    <section id="table" className="flex flex-col gap-[1.563vw]">
+    <section
+      id="table"
+      className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]"
+    >
       <motion.section
         className="text-dark-purple"
         initial={{ y: 80, opacity: 0 }}
@@ -76,7 +79,7 @@ export function TableOfContent() {
       >
         <div className="wrapper">
           <div className="paddings">
-            <div className="flex justify-between flex-wrap gap-[1.042vw]">
+            <div className="flex justify-between max-sm:flex-col sm:flex-wrap gap-[3vw] sm:gap-[1.042vw]">
               {nav_links.map((link, index) => (
                 <motion.div
                   key={link.number}
@@ -87,7 +90,7 @@ export function TableOfContent() {
                 >
                   <Link
                     to={link.href}
-                    className={`rounded-[1.25vw] flex transition-all duration-250 p-[1.667vw] size-[16vw] justify-between flex-col border-[0.104vw] border-dark-purple text-dark-purple  hover:bg-light-purple hover:text-white nav-card ${link.color}`}
+                    className={`rounded-[6.154vw] sm:rounded-[1.25vw] flex transition-all duration-250 p-[6.154vw] md:p-[1.667vw] size-auto md:size-[16vw] justify-between flex-col border-[0.513vw] sm:border-[0.104vw] border-dark-purple text-dark-purple  hover:bg-light-purple hover:text-white nav-card ${link.color}`}
                   >
                     <div className="text-styles-h4">{link.number}</div>
                     <div className="text-styles-h4">{link.title}</div>
