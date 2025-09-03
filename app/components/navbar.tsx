@@ -304,13 +304,14 @@ export function Navbar() {
 
       {/* desktop */}
       <div className="flex sticky top-[1.5vw] h-auto w-[18vw] flex-col gap-[.5vw] max-md:hidden">
-        <Link to="#" className="inline-block">
-          <img
+        <Link to="#" className="inline-block text-[3vw] font-main">
+          {/* <img
             src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d6db329ed60108107185e2_logo.svg"
             loading="lazy"
             alt=""
             className="image"
-          />
+          /> */}
+          Blockgram
         </Link>
 
         {nav_links.map((link) => {
