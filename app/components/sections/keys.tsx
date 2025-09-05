@@ -6,40 +6,43 @@ const keyFindings = [
     title: "Scam Bots and Fake Accounts",
     description:
       "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over **60% of people say they face scam attempts every month**.",
+    image: "/keys/Scam bots.png",
   },
   {
     title: "Risky Payments",
     description:
       "Copying and pasting wallet addresses is still the norm. A single mistake can cost users their money instantly.",
+    image: "/keys/Risky payments.png",
   },
   {
     title: "Missing AI Assistance",
     description:
       "Telegram leaves users drowning in information. There are no AI summaries, no contextual search, and no way to “ask the chat” for quick answers.",
+    image: "/keys/Missing AI assistance.png",
   },
   {
     title: "Forgotten Chats",
     description:
       "Catching up in an active group is almost impossible. Hundreds of unread messages mean wasted time and missed context.",
-  },
-  {
-    title: "Question Card",
-    description: "Do you feel Telegram has become too overwhelming to manage?",
+    image: "/keys/Forgotten chats.png",
   },
   {
     title: "Identity Confusion",
     description:
       "Anyone can pretend to be a KOL or project lead. Communities spend hours verifying who is real and who is not.",
+    image: "/keys/Identity Confusion.png",
   },
   {
     title: "Notification Overload",
     description:
       "Important messages get buried under endless pings. There is no smart way to prioritize what really matters.",
+    image: "/keys/Notification Overload.png",
   },
   {
     title: "Too Many Accounts",
     description:
       "Power users juggle work groups, trading accounts, and communities separately. Telegram gives no easy way to unify or manage them.",
+    image: "/keys/Too Many Accounts.png",
   },
 ];
 
@@ -96,12 +99,12 @@ export function Keys() {
                         key={Math.random() + index}
                       >
                         <img
-                          src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebeb9cd3a09bec94bb2b_keys%201.svg"
+                          src={item.image}
                           loading="eager"
                           alt=""
-                          className="image"
+                          className="image aspect-video"
                         />
-                        <div className="keys-card_content">
+                        <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
                           <div className="keys-card_title">
                             <div className="text-styles-h4">{item.title}</div>
                           </div>
@@ -118,7 +121,7 @@ export function Keys() {
                           </div>
                         </div>
 
-                        {/* {index === 1 && <QuestionCard />} */}
+                        {index === 4 && <QuestionCard />}
                       </div>
                     );
                   })}
@@ -177,7 +180,7 @@ function QuestionCard() {
       }}
     >
       <div className="text-styles-h3">
-        Did you struggle with&nbsp;a tight budget this year?
+        Do you feel Telegram has become too overwhelming to manage?
       </div>
       <div className="flex gap-[1.667vw] md:gap-[0.625vw] items-center justify-center *:cursor-pointer">
         <div
