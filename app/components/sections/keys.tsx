@@ -1,6 +1,39 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const keyFindings = [
+  {
+    title: "Scams & Spam are Everywhere",
+    description:
+      "Telegram is flooded with scam bots, fake accounts, and phishing links. Users are exposed to constant spam DMs and unsafe files. Trust is low and users risk losing funds daily",
+  },
+  {
+    title: "Not Crypto-Native",
+    description:
+      "Despite being the main hub for the crypto community, Telegram has no built-in wallet or trading features. Users must rely on insecure bots or third-party apps to send tokens.Friction, higher scam exposure, and missed opportunities for seamless crypto transactions.",
+  },
+  {
+    title: "Message Overload = Missed Opportunities",
+    description:
+      "20k+ member groups push hundreds of messages in minutes. Vital updates from KOLs and devs get buried under noise. Users miss alpha, fail to act on time, and drop engagement.",
+  },
+  {
+    title: "No Identity Verification",
+    description:
+      "Anyone can pretend to be a KOL, dev, or project lead. Impersonator scams are rampant.Communities cannot reliably trust who they are interacting with.",
+  },
+  {
+    title: "Poor Productivity Tools",
+    description:
+      "No reminders, scheduling, or smart notifications. Following up on tasks is chaotic. Communities remain disorganized and miss key moments.",
+  },
+  {
+    title: "Limited Accounts, Limited Control",
+    description:
+      "Account restrictions make it hard to manage multiple projects. Community managers and power users struggle with switching. Fragmented workflows and lost efficiency.",
+  },
+];
+
 export function Keys() {
   return (
     <section id="keys" className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]">
@@ -45,208 +78,33 @@ export function Keys() {
                     transform: "translate3d(0px, 0px, 0px)",
                   }}
                 >
-                  <div
-                    className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                    role="group"
-                    aria-label="1 / 8"
-                  >
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebeb9cd3a09bec94bb2b_keys%201.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="keys-card_content">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Tracking and measuring PR&nbsp;efforts
+                  {keyFindings.map((item, index) => {
+                    return (
+                      <div
+                        className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
+                        role="group"
+                        aria-label={` ${index + 1} / ${keyFindings.length}`}
+                        key={Math.random() + index}
+                      >
+                        <img
+                          src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebeb9cd3a09bec94bb2b_keys%201.svg"
+                          loading="eager"
+                          alt=""
+                          className="image"
+                        />
+                        <div className="keys-card_content">
+                          <div className="keys-card_title">
+                            <div className="text-styles-h4">{item.title}</div>
+                          </div>
+                          <div className="text-styles-content">
+                            {item.description}
+                          </div>
                         </div>
+
+                        {index === 1 && <QuestionCard />}
                       </div>
-                      <div className="text-styles-content">
-                        The importance of tracking and measuring PR efforts has
-                        surged, with{" "}
-                        <span counter-element="number" className="font-bold">
-                          38
-                        </span>
-                        <strong>%</strong> of professionals prioritizing this in
-                        2024, up from just{" "}
-                        <span counter-element="number" className="font-bold">
-                          23
-                        </span>
-                        <strong>%</strong> in 2022.
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                    role="group"
-                    aria-label="2 / 8"
-                  >
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf167b7ceeee72754d5_keys%202.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="keys-card_content">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">Budget constraints</div>
-                      </div>
-                      <div className="text-styles-content">
-                        Budget constraints remain the top cause for not using PR
-                        tools, affecting <strong>68%</strong> of professionals
-                        in 2024, with sole practitioner particularly impacted at{" "}
-                        <strong>71%.</strong>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                    role="group"
-                    aria-label="3 / 8"
-                  >
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf13e006924d0bcd21c_keys%203.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="keys-card_content">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">Effective outreach</div>
-                      </div>
-                      <div className="text-styles-content">
-                        The use of regular email services for pitches has
-                        plummeted from <strong>74%</strong> in 2022 to{" "}
-                        <strong>50%</strong> in 2024, signaling a move towards
-                        specialized tools for more effective outreach.
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                    role="group"
-                    aria-label="4 / 8"
-                  >
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf0294029c68369188c_keys%204.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="keys-card_content">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Satisfaction with PR tools
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        Satisfaction with PR tools has nearly doubled since
-                        2022, with <strong>60%</strong> of professionals now
-                        expressing contentment, up from <strong>36%</strong>.
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                    role="group"
-                    aria-label="5 / 8"
-                  >
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf1fb5adca466b6a3d6_keys%205.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="keys-card_content">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Demonstrating PR's value
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        The challenge of demonstrating PR's value has
-                        intensified, with <strong>48%</strong> struggling in
-                        2024 due to higher ROI expectations from stakeholders.
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                    role="group"
-                    aria-label="6 / 8"
-                  >
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf131dddb6b6aab1d66_keys%206.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="keys-card_content">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          AI for research, analysis, and reporting
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        The use of AI for research, analysis, and reporting has
-                        skyrocketed, from <strong>53%</strong> to{" "}
-                        <strong>67%</strong> for research and from{" "}
-                        <strong>8%</strong> to <strong>31%</strong> for
-                        analysis.
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                    role="group"
-                    aria-label="7 / 8"
-                  >
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf1c9641341b4c3b8c6_keys%207.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="keys-card_content">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Data analysis in PR
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        The value placed on data analysis skills in PR dropped
-                        by <strong>8%</strong> as AI increasingly automates
-                        these tasks, shifting focus to more uniquely human
-                        skills.
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                    role="group"
-                    aria-label="8 / 8"
-                  >
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf159544a6d0fb938c9_keys%208.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="keys-card_content">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Sales metrics in PR
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        The emphasis on sales metrics in PR measurement rose
-                        from <strong>13%</strong> in 2023 to{" "}
-                        <strong>19%</strong> in 2024, reflecting a shift towards
-                        more business-oriented outcomes.
-                      </div>
-                    </div>
-                  </div>
+                    );
+                  })}
                 </div>
               </motion.div>
 
@@ -259,195 +117,28 @@ export function Keys() {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <div className="flex w-auto -mx-[9.205vw] pl-[8.205vw] pr-[15vw] overflow-x-scroll py-4 static gap-[3.59vw] custom-scrollbar">
-                  <div className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]">
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebeb9cd3a09bec94bb2b_keys%201.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Tracking and measuring PR&nbsp;efforts
+                  {keyFindings.map((item, index) => (
+                    <div
+                      className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]"
+                      key={Math.random() + index}
+                    >
+                      <img
+                        src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf167b7ceeee72754d5_keys%202.svg"
+                        loading="eager"
+                        alt=""
+                        className="image"
+                      />
+                      <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
+                        <div className="keys-card_title">
+                          <div className="text-styles-h4">{item.title}</div>
+                        </div>
+                        <div className="text-styles-content">
+                          {item.description}
                         </div>
                       </div>
-                      <div className="text-styles-content">
-                        The importance of tracking and measuring PR efforts has
-                        surged, with{" "}
-                        <span counter-element="number" className="font-bold">
-                          <strong>38.9</strong>
-                        </span>
-                        <strong>%</strong> of professionals prioritizing this in
-                        2024, up from just{" "}
-                        <span counter-element="number" className="font-bold">
-                          <strong className="font-bold">23.3</strong>
-                        </span>
-                        <strong>%</strong> in 2022.
-                      </div>
+                      {index === 1 && <QuestionCard />}
                     </div>
-                  </div>
-                  <div className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]">
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf167b7ceeee72754d5_keys%202.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">Budget constraints</div>
-                      </div>
-                      <div className="text-styles-content">
-                        Budget constraints remain the top motivation for not
-                        using PR tools, affecting <strong>68%</strong> of
-                        professionals in 2024, with sole practitioner
-                        particularly impacted at <strong>71%.</strong>
-                      </div>
-                    </div>
-                    {/* <div className="swiper-slide_quiz-wrap">
-                      <div className="text-styles-h3">
-                        Did you struggle with&nbsp;a tight budget this year?
-                      </div>
-                      <div className="swiper-slide_quiz-btns">
-                        <div
-                          data-w-id="050439f1-3ec6-570a-b613-392b4bcf1869"
-                          className="button color-purple primal"
-                        >
-                          <div className="text-styles-content bold">Yes</div>
-                        </div>
-                        <div
-                          data-w-id="050439f1-3ec6-570a-b613-392b4bcf186c"
-                          className="button color-purple secondary"
-                        >
-                          <div className="text-styles-content bold">No</div>
-                        </div>
-                      </div>
-                    </div> */}
-                  </div>
-                  <div className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]">
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf13e006924d0bcd21c_keys%203.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">Effective outreach</div>
-                      </div>
-                      <div className="text-styles-content">
-                        The use of regular email services for pitches has
-                        plummeted from <strong>74%</strong> in 2022 to{" "}
-                        <strong>50%</strong> in 2024, signaling a move towards
-                        specialized tools for more effective outreach.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]">
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf0294029c68369188c_keys%204.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Satisfaction with PR tools
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        Satisfaction with PR tools has nearly doubled since
-                        2022, with <strong>60%</strong> of professionals now
-                        expressing contentment, up from <strong>36%</strong> two
-                        years ago.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]">
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf1fb5adca466b6a3d6_keys%205.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Demonstrating PR's value
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        The challenge of demonstrating PR's value has
-                        intensified, with <strong>48%</strong> struggling in
-                        2024 due to higher ROI expectations from stakeholders.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]">
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf131dddb6b6aab1d66_keys%206.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          AI for research, analysis, and reporting
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        The use of AI for research, analysis, and reporting has
-                        skyrocketed, from <strong>53%</strong> to{" "}
-                        <strong>67%</strong> for research, and from{" "}
-                        <strong>8%</strong> to <strong>31%</strong> for
-                        analysis.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]">
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf1c9641341b4c3b8c6_keys%207.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Data analysis in PR
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        The value placed on data analysis in PR dropped by{" "}
-                        <strong>8%</strong> as AI increasingly automates these
-                        tasks, shifting focus to more uniquely human skills.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]">
-                    <img
-                      src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf159544a6d0fb938c9_keys%208.svg"
-                      loading="eager"
-                      alt=""
-                      className="image"
-                    />
-                    <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                      <div className="keys-card_title">
-                        <div className="text-styles-h4">
-                          Sales metrics in PR
-                        </div>
-                      </div>
-                      <div className="text-styles-content">
-                        The emphasis on sales metrics in PR measurement rose
-                        from <strong>13%</strong> in 2023 to{" "}
-                        <strong>19%</strong> in 2024, reflecting a shift towards
-                        more business-oriented outcomes.
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </motion.div>
             </div>
@@ -455,5 +146,37 @@ export function Keys() {
         </div>
       </motion.section>
     </section>
+  );
+}
+
+function QuestionCard() {
+  const [open, setOpen] = React.useState(true);
+
+  return (
+    <div
+      className="absolute inset-0 z-10 gap-[4vw] md:gap-[2.083vw] bg-light-purple text-center flex-col flex px-[1.667vw] justify-center"
+      style={{
+        display: open ? "flex" : "none",
+      }}
+    >
+      <div className="text-styles-h3">
+        Did you struggle with&nbsp;a tight budget this year?
+      </div>
+      <div className="flex gap-[1.667vw] md:gap-[0.625vw] items-center justify-center *:cursor-pointer">
+        <div
+          className="uppercase transition-all duration-200 p-[1.667vw_5vw] md:p-[0.625vw_2.5vw] rounded-full bg-dark-purple text-white hover:bg-blue hover:text-white"
+          onClick={() => setOpen(false)}
+        >
+          <div className="text-styles-content font-bold">Yes</div>
+        </div>
+        <div
+          data-w-id="050439f1-3ec6-570a-b613-392b4bcf186c"
+          className="uppercase transition-all duration-200 p-[1.667vw_5vw] md:p-[0.625vw_2.5vw] rounded-full bg-transparent text-dark-purple hover:bg-[#3f2b4c40] hover:text-white border-[0.104vw] border-dark-purple"
+          onClick={() => setOpen(false)}
+        >
+          <div className="text-styles-content font-bold">No</div>
+        </div>
+      </div>
+    </div>
   );
 }

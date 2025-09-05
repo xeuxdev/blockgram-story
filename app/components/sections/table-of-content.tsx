@@ -6,45 +6,33 @@ const nav_links = [
     number: "01",
     title: "Introduction",
     href: "#introduction",
+    color: "light-purple",
   },
   {
     number: "02",
     title: "Table of Contents",
     href: "#table",
+    color: "light-purple",
   },
-  {
-    number: "03",
-    title: "Key Findings",
-    href: "#keys",
-  },
+  { number: "03", title: "Key Findings", href: "#keys", color: "light-purple" },
   {
     number: "04",
-    title: "Pain Points in PR",
+    title: "Pain Points",
     href: "#points",
     color: "purple",
   },
-  {
-    number: "05",
-    title: "The Use of PR Tools",
-    href: "#tools",
-    color: "red",
-  },
+  { number: "05", title: "The Use of Blockgram", href: "#tools", color: "red" },
   {
     number: "06",
-    title: "AI in PR: Promise or Pitfall?",
-    href: "#ai",
-    color: "green",
-  },
-  {
-    number: "07",
-    title: "What’s Next in PR Tech",
-    href: "#next",
+    title: "Features in Blockgram",
+    href: "#features",
     color: "blue",
   },
   {
-    number: "08",
-    title: "About Prowly",
-    href: "#prowly",
+    number: "07",
+    title: "About Blockgram",
+    href: "#blockgram",
+    color: "light-purple",
   },
 ];
 
@@ -79,7 +67,7 @@ export function TableOfContent() {
       >
         <div className="wrapper">
           <div className="paddings">
-            <div className="flex justify-between max-sm:flex-col sm:flex-wrap gap-[3vw] sm:gap-[1.042vw]">
+            <div className="flex justify-between md:justify-start max-sm:flex-col sm:flex-wrap gap-[3vw] sm:gap-[1.042vw]">
               {nav_links.map((link, index) => (
                 <motion.div
                   key={link.number}

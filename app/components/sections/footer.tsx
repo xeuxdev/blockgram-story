@@ -77,12 +77,7 @@ export function Footer() {
               </div>
             </a>
           </div>
-          <img
-            src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1dd7d3db9b7726fd0b240_Footer%20logo.svg"
-            loading="lazy"
-            alt=""
-            className="image footer-logo"
-          />
+          <p className="text-[16vw] md:text-[13.333vw]">Blockgram</p>
         </motion.div>
       </div>
 
