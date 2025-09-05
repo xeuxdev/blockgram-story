@@ -1,10 +1,12 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { cn } from "~/lib/utils";
-import { motion } from "framer-motion";
+import { BarChart } from "../bar-chart";
+import { PRChallengesChart } from "../chart";
+import { PointsTables } from "../table";
 
 export function PainPoints() {
   const [activeTab, setActiveTab] = React.useState("charts");
-  const [activeTabTwo, setActiveTabTwo] = React.useState("2024");
 
   return (
     <section
@@ -27,7 +29,7 @@ export function PainPoints() {
       >
         <div className="wrapper small text-white bg-purple">
           <div className="text-center">
-            <h3 className="text-styles-h1">Pain Points in&nbsp;PR</h3>
+            <h3 className="text-styles-h1">Pain Points</h3>
           </div>
         </div>
       </motion.div>
@@ -41,36 +43,29 @@ export function PainPoints() {
       >
         <div className="wrapper">
           <div className="paddings">
-            <div className="flex max-sm:flex-col gap-[4.103vw] md:gap-[1.042vw]">
+            <div className="flex max-md:flex-col gap-[4.103vw] md:gap-[1.042vw]">
               <div className="flex flex-col gap-[1.042vw] w-full md:w-[35.365vw]">
                 <h4 className="text-styles-h2">
-                  Growing Pains in&nbsp;PR:{" "}
+                  Growing Pains in Telegram:{" "}
                   <span className="text-purple">
-                    Budgets, Engagement, and&nbsp;Value
+                    Scams, Chaos, and Crypto Friction
                   </span>
                 </h4>
               </div>
               <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] flex-1">
                 <div className="text-styles-h4">
-                  Financial pressures and industry shifts are&nbsp;challenging
-                  PR pros to adapt
+                  Telegram was never designed for crypto. It’s unsafe,
+                  unorganized, and inefficient, leaving users exposed to fraud
+                  and overwhelmed by chaos.
                 </div>
                 <div className="text-styles-content">
-                  As economic pressures rise, PR professionals are finding it
-                  harder to&nbsp;navigate shrinking budgets, connect with
-                  journalists, and prove their worth. In just two years, the
-                  number of PR pros struggling with budget constraints has
-                  jumped from{" "}
-                  <span className="text-purple">
-                    <strong>35%</strong>
-                  </span>{" "}
-                  to{" "}
-                  <span className="text-purple">
-                    <strong>57%</strong>
-                  </span>
-                  . These statistics reflect a rapidly evolving industry where
-                  proving ROI is more critical — and more challenging —than
-                  ever.
+                  <strong className="text-purple">95% </strong>
+                  of crypto users report being targeted by spam or scam bots on
+                  Telegram.
+                  <strong className="text-purple">0 </strong> native crypto
+                  tools exist, users rely on risky third-party bots.
+                  <strong className="text-purple">70% </strong> of users say
+                  they miss important updates in noisy groups.
                 </div>
               </div>
             </div>
@@ -104,7 +99,7 @@ export function PainPoints() {
               <div className="flex flex-col relative space-y-[2.5vw]">
                 {/* tablist */}
                 <div
-                  className="flex p-[1.538vw] sm:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] sm:gap-[0.417vw] relative w-fit mx-auto"
+                  className="flex p-[1.538vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
                   role="tablist"
                 >
                   {(["charts", "table"] as const).map((item) => {
@@ -129,24 +124,20 @@ export function PainPoints() {
                 </div>
 
                 {/* content */}
-                <div className="overflow-visible relative w-full">
+                <div className="w-full lg:hide-scrollbar">
                   {activeTab === "charts" ? (
-                    <div className="max-h-[925px] size-full">
-                      <img src="/pain-point-charts.png" alt="" />
-                    </div>
+                    <PRChallengesChart />
                   ) : (
-                    <div className="max-h-[845px] size-full">
-                      <img src="/pain-point-table.png" alt="" />
-                    </div>
+                    <PointsTables />
                   )}
                 </div>
               </div>
 
               {/* big num */}
 
-              <div className="flex max-sm:flex-col gap-[4.103vw] md:gap-[1.042vw] items-end -mt-[2.5vw]">
-                <div className="text-purple flex-none w-auto sm:w-[35.365vw]">
-                  <div className="flex text-[34vw] sm:text-[13.333vw]/[100%] -tracking-[0.104vw]">
+              <div className="flex max-md:flex-col gap-[4.103vw] md:gap-[1.042vw] items-center">
+                <div className="text-purple flex-none w-auto md:w-[35.365vw]">
+                  <div className="flex text-[34vw] md:text-[13.333vw]/[100%] -tracking-[0.104vw]">
                     <span counter-element="number" className=" preloader-count">
                       43
                     </span>
@@ -155,8 +146,7 @@ export function PainPoints() {
                 </div>
                 <div className="flex-1 max-md:text-center">
                   <div className="text-styles-h3 mobile-24">
-                    of PR Pros have experienced budget cuts leading to the
-                    cancellation of paid tools.
+                    of crypto bros have experienced.
                   </div>
                 </div>
               </div>
@@ -164,71 +154,6 @@ export function PainPoints() {
           </div>
         </div>
       </motion.div>
-
-      <motion.section
-        initial={{ y: 80 }}
-        whileInView={{ y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-dark-purple"
-      >
-        <div className="wrapper">
-          <div className="paddings">
-            <div className="flex max-sm:flex-col gap-[4.103vw] md:gap-[1.042vw]">
-              <div className="flex flex-col gap-[1.042vw] w-full md:w-[35.365vw]">
-                <h4 className="text-styles-h2">
-                  PR Pros Double Down on&nbsp;
-                  <span className="alt text-purple">
-                    Strategy and&nbsp;Results in&nbsp;2024
-                  </span>
-                </h4>
-              </div>
-              <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] flex-1">
-                <div className="text-styles-h4">
-                  Top-tier coverage, measurable impact, and reporting efficiency
-                  take center stage
-                </div>
-                <div className="text-styles-content">
-                  PR pros are more strategic and results-driven than ever.
-                  Securing top-tier publications has surged as a priority. The
-                  focus on tracking and measuring PR efforts has jumped
-                  significantly, reaching nearly{" "}
-                  <span
-                    counter-element="number"
-                    className="text-purple font-bold"
-                  >
-                    39
-                  </span>
-                  <strong className="text-purple font-bold">%</strong> in 2024.
-                  Additionally, the push to create PR reports faster has more
-                  than tripled, rising from{" "}
-                  <span
-                    counter-element="number"
-                    className="text-purple font-bold"
-                  >
-                    6
-                  </span>
-                  <span className="text-purple font-bold">
-                    <strong>%</strong>
-                  </span>{" "}
-                  in 2022 to{" "}
-                  <span
-                    counter-element="number"
-                    className="text-purple font-bold"
-                  >
-                    22
-                  </span>
-                  <span className="text-purple font-bold">
-                    <strong>%</strong>
-                  </span>{" "}
-                  in 2024, highlighting the industry’s increasing emphasis on
-                  efficiency and proving value.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.section>
 
       <motion.div
         initial={{ y: 80 }}
@@ -246,60 +171,15 @@ export function PainPoints() {
                   <h5 className="text-styles-h3">
                     What's the one thing you'd most like{" "}
                     <span className="alt text-purple">
-                      to&nbsp;improve in your PR work right now?
+                      to improve in your Telegram experience right now?
                     </span>
                   </h5>
                 </div>
               </div>
 
-              {/* graphs */}
-              <div className="flex flex-col relative space-y-[2.5vw]">
-                {/* tablist */}
-                <div
-                  className="flex p-[1.6vw] md:p-[0.625vw] justify-center rounded-full bg-white gap-[2.564vw] md:gap-[0.417vw] relative w-fit mx-auto"
-                  role="tablist"
-                >
-                  {(["2024", "2023", "2022", "table"] as const).map((item) => {
-                    const isActive = item === activeTabTwo;
-
-                    return (
-                      <button
-                        key={item}
-                        className={cn(
-                          "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
-                          isActive ? "bg-purple text-white" : "text-dark-purple"
-                        )}
-                        role="tab"
-                        onClick={() => setActiveTabTwo(item)}
-                      >
-                        <span className="font-bold text-styles-content capitalize">
-                          {item}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* content */}
-                <div className="overflow-visible relative w-full">
-                  {activeTabTwo === "2024" ? (
-                    <div className="max-h-[573px] size-full">
-                      <img src="/pain-point-2024.png" alt="" />
-                    </div>
-                  ) : activeTabTwo === "2023" ? (
-                    <div className="max-h-[573px] size-full">
-                      <img src="/pain-point-2023.png" alt="" />
-                    </div>
-                  ) : activeTabTwo === "2022" ? (
-                    <div className="max-h-[573px] size-full">
-                      <img src="/pain-point-2022.png" alt="" />
-                    </div>
-                  ) : (
-                    <div className="max-h-[293px] size-full">
-                      <img src="/pain-point-table-2.png" alt="" />
-                    </div>
-                  )}
-                </div>
+              <div className="">
+                {/* table */}
+                <BarChart />
               </div>
             </div>
           </div>
