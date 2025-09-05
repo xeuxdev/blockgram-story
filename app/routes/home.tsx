@@ -1,12 +1,11 @@
 import { Navbar } from "~/components/navbar";
 import { About } from "~/components/sections/about";
-import { AISection } from "~/components/sections/ai";
 import { Footer } from "~/components/sections/footer";
 import { Introduction } from "~/components/sections/introduction";
 import { Keys } from "~/components/sections/keys";
-import { Next } from "~/components/sections/next";
+import { Features } from "~/components/sections/features";
 import { PainPoints } from "~/components/sections/points";
-import { TableOfContent } from "~/components/sections/table";
+import { TableOfContent } from "~/components/sections/table-of-content";
 import { Tools } from "~/components/sections/tools";
 import type { Route } from "./+types/home";
 
@@ -28,8 +27,7 @@ export default function Home() {
         <Keys />
         <PainPoints />
         <Tools />
-        <AISection />
-        <Next />
+        <Features />
         <About />
         <Footer />
       </main>

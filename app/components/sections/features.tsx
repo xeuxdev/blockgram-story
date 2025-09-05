@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-export function Next() {
+export function Features() {
   return (
     <motion.section
-      id="next"
+      id="features"
       className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]"
       initial={{ y: 80 }}
       whileInView={{ y: 0 }}
@@ -19,56 +19,7 @@ export function Next() {
       >
         <div className="wrapper small bg-blue text-white">
           <div className="text-center">
-            <h3 className="text-styles-h1">What’s Next in&nbsp;PR Tech</h3>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="section_desc text-dark-purple"
-        initial={{ y: 80 }}
-        whileInView={{ y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="wrapper">
-          <div className="paddings">
-            <div className="desc-wrapper">
-              <div className="text-styles-h4 secondary">
-                The future of PR is about balancing AI's efficiency with the
-                irreplaceable human touch. As AI takes over routine tasks, PR
-                pros must double down on creativity, storytelling, and
-                relationship-building—areas where machines can’t compete. Expect
-                a shift towards strategic roles, with a growing focus on
-                managing relationships and delivering measurable ROI.
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="section_desc"
-        initial={{ y: 80 }}
-        whileInView={{ y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="wrapper">
-          <div className="paddings">
-            <div className="mt-[3vw] rounded-[1.667vw] overflow-hidden">
-              <video
-                src="https://go.prowly.com/hubfs/State%20of%20PR%202024%20-%20Tonya%20McKenzie.mp4"
-                controls
-                width="100%"
-              ></video>
-            </div>
-            <div className="flex flex-col mt-[2vw] gap-[1vw]">
-              <div className="text-styles-h4">Tonya McKenzie</div>
-              <div className="font-medium text-[1.042vw]/[145%] font-sec">
-                PR &amp; Leadership Consultant, CEO of Sand&amp;Shores
-              </div>
-            </div>
+            <h3 className="text-styles-h1">Features in Blockgram</h3>
           </div>
         </div>
       </motion.div>
@@ -89,10 +40,7 @@ export function Next() {
               <div className="relative md:w-[32.604vw]">
                 <div className="flex flex-col sticky top-[4vw] gap-[1.25vw]">
                   <div className="text-styles-h2">
-                    How Will PR Professionals' Roles Change Next Year?
-                  </div>
-                  <div className="text-styles-h4 secondary">
-                    There will be a greater call for:
+                    How Will Blockgram Transform Crypto Chats
                   </div>
                 </div>
               </div>
@@ -102,37 +50,62 @@ export function Next() {
                 <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] -rotate-2">
                   <div className="text-styles-h4">01</div>
                   <div className="text-styles-h4">
-                    Balancing AI Integration with Human Creativity
+                    Seamless in-chat crypto transfers with usernames as wallets
                   </div>
                 </div>
                 <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
                   <div className="text-styles-h4">02</div>
                   <div className="text-styles-h4">
-                    Prioritizing Strategic and Creative Skills
+                    AI spam detection and scam bot filtering for safer
+                    communities
                   </div>
                 </div>
                 <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] -rotate-2">
                   <div className="text-styles-h4">03</div>
                   <div className="text-styles-h4">
-                    Increased Focus on Relationship Management
+                    Verified KOL & dev badges to stop impersonators
                   </div>
                 </div>
                 <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
                   <div className="text-styles-h4">04</div>
                   <div className="text-styles-h4">
-                    Attention on AI's Impact on PR Quality
+                    Instant token trading with ticker-based buy/sell
                   </div>
                 </div>
                 <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] -rotate-2">
                   <div className="text-styles-h4">05</div>
                   <div className="text-styles-h4">
-                    The Critical Role of Adaptation and Skill Development
+                    Smart notifications that prioritize high-value accounts
                   </div>
                 </div>
                 <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
                   <div className="text-styles-h4">06</div>
                   <div className="text-styles-h4">
-                    Shifting PR Roles Towards ROI-Driven Responsibilities
+                    Automatic foddering to keep KOLs, devs, and whales organized
+                  </div>
+                </div>
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
+                  <div className="text-styles-h4">07</div>
+                  <div className="text-styles-h4">
+                    Built-in video calls and Meet-style scheduling
+                  </div>
+                </div>
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
+                  <div className="text-styles-h4">08</div>
+                  <div className="text-styles-h4">
+                    Unlimited accounts for power users and managers
+                  </div>
+                </div>
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
+                  <div className="text-styles-h4">09</div>
+                  <div className="text-styles-h4">
+                    File scanner to block malware and unsafe attachments
+                  </div>
+                </div>
+                <div className="bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] rotate-2">
+                  <div className="text-styles-h4">10</div>
+                  <div className="text-styles-h4">
+                    AI chat summarization to cut through noisy groups
                   </div>
                 </div>
               </div>
@@ -152,18 +125,18 @@ export function Next() {
           <div className="paddings">
             <div className="flex flex-col gap-[1.667vw]">
               <div className="text-styles-h4 secondary">
-                PR professionals now have access to&nbsp;a wealth of data and
-                advanced technology, a resource once reserved for marketers.
-                This means more informed decisions, more targeted strategies,
-                and a sharper focus on ROI, especially in times of tight
-                budgets.
+                Crypto communities now have access to AI-powered security, smart
+                notifications, and built-in wallets tools once unavailable
+                inside Telegram. This means safer conversations, seamless token
+                transfers, and smarter organization of noisy chats, especially
+                in times when scams and chaos are at their peak.
               </div>
               <div className="text-styles-h4 secondary">
-                PR professionals now have access to&nbsp;a wealth of data and
-                advanced technology, a resource once reserved for marketers.
-                This means more informed decisions, more targeted strategies,
-                and a sharper focus on&nbsp;ROI, especially in times of tight
-                budgets.
+                Blockgram users now benefit from a trust layer with verified KOL
+                badges, token-holder markers, and file scanning. This translates
+                into more informed decisions, faster trades, and a sharper focus
+                on meaningful engagement something Telegram was never designed
+                to deliver.
               </div>
             </div>
           </div>

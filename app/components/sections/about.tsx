@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export function About() {
   return (
     <motion.section
-      id="prowly"
+      id="blockgram"
       className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]"
       initial={{ y: 80 }}
       whileInView={{ y: 0 }}
@@ -18,7 +18,7 @@ export function About() {
         transition={{ duration: 0.6 }}
       >
         <div className="text-center">
-          <h3 className="text-styles-h1">About Prowly</h3>
+          <h3 className="text-styles-h1">About Blockgram</h3>
         </div>
       </motion.div>
 
@@ -32,34 +32,30 @@ export function About() {
           <div className="paddings">
             <div className="md:w-[55vw] flex flex-col gap-[1.667vw]">
               <div className="text-styles-h4">
-                We’re a technology company that has created an all-in-one public
-                relations management platform that helps growth-oriented
-                professionals earn media coverage through creative storytelling,
-                personalization, and innovative technology.
+                We&apos;re a technology company that has created an all-in-one
+                communication platform built on the Telegram API — designed
+                specifically for crypto-native communities. Blockgram helps
+                traders, investors, KOLs, and project teams connect securely
+                through AI-driven protection, verified identities, seamless
+                token transfers, and powerful productivity tools.
               </div>
               <div className="text-styles-h4 secondary">
-                Thanks to Prowly, users are able to foster long-term
-                relationships with journalists by drafting effective strategies
-                based on industry data and prove their value to clients and
-                stakeholders with easy-to-understand insights and metrics.
+                Thanks to Blockgram, users can build trust, efficiency, and
+                growth inside their communities, whether it&apos;s preventing
+                scams with impersonator checks, staying organized with smart
+                folders, or enabling direct in-chat trading with token tickers.
+                Everything crypto communities need, natively in one app.
               </div>
               <div className="text-styles-h4 secondary">
-                The solution has been successfully conquering the global PR
-                software market for the past{" "}
-                <span className="text-blue">
-                  <strong>10 years</strong>
-                </span>
-                , and today it has already been used by more than{" "}
-                <span className="text-blue">
-                  <strong>7,000 users</strong>
-                </span>{" "}
-                in over{" "}
-                <span className="text-blue">
-                  <strong>70 countries.</strong>
-                </span>
+                The solution has been rapidly adopted across global crypto
+                networks, with early adoption showing thousands of users across
+                multiple countries, and strong traction among power users,
+                whales, and community leaders. Blockgram is redefining what
+                crypto communication should be: secure, organized, and
+                crypto-native.
               </div>
               <a
-                href="https://prowly.com/"
+                href="https://blockgram-landing.vercel.app/"
                 target="_blank"
                 className="bg-blue text-white uppercase cursor-pointer rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw] duration-200 transition-all inline-block w-fit"
               >
