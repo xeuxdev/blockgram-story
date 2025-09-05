@@ -267,7 +267,7 @@ export function Navbar() {
 
             {/* mobile download button */}
             <Link
-              to="https://go.prowly.com/hubfs/The%20State%20of%20PR%20Technology%202024%20by%20Prowly%20PR%20Software.pdf"
+              to=""
               target="_blank"
               className="flex justify-center items-center gap-[2vw] border-[0.3vw] border-dark-purple rounded-[100vw] py-[3vw] mt-[2vw] bg-light-purple text-dark-purple transition-all duration-300"
               style={{
@@ -329,11 +329,7 @@ export function Navbar() {
           );
         })}
 
-        <Link
-          to="https://go.prowly.com/hubfs/The%20State%20of%20PR%20Technology%202024%20by%20Prowly%20PR%20Software.pdf"
-          target="_blank"
-          className={getDownloadButtonClasses()}
-        >
+        <Link to="" target="_blank" className={getDownloadButtonClasses()}>
           <div className="font-main text-[1.042vw] font-medium leading-[145%]">
             DOWNLOAD PDF
           </div>

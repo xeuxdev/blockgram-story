@@ -18,48 +18,38 @@ export function Footer() {
               </div>
               <div className="flex gap-[5.128vw] md:gap-[1.042vw] items-center">
                 <a
-                  href="https://www.linkedin.com/company/prowly-com"
+                  href=""
                   target="_blank"
                   className="w-[7.179vw] md:w-[1.458vw]"
                 >
                   <img
-                    src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1dd157c2e698c39e0cfae_LN.svg"
+                    src="/linkedin.svg"
                     loading="lazy"
                     alt=""
                     className="image"
                   />
                 </a>
                 <a
-                  href="https://twitter.com/Prowly_com"
+                  href=""
                   target="_blank"
                   className="w-[7.179vw] md:w-[1.458vw]"
                 >
-                  <img
-                    src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1dd15ec3e5efa0ff50975_X.svg"
-                    loading="lazy"
-                    alt=""
-                    className="image"
-                  />
+                  <img src="X.svg" loading="lazy" alt="" className="image" />
                 </a>
                 <a
-                  href="https://www.instagram.com/prowly_com/"
+                  href=""
                   target="_blank"
                   className="w-[7.179vw] md:w-[1.458vw]"
                 >
-                  <img
-                    src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1dd151b0f5c6564c13cdf_IN.svg"
-                    loading="lazy"
-                    alt=""
-                    className="image"
-                  />
+                  <img src="IN.svg" loading="lazy" alt="" className="image" />
                 </a>
                 <a
-                  href="https://www.threads.net/@prowly_com"
+                  href=""
                   target="_blank"
                   className="w-[7.179vw] md:w-[1.458vw]"
                 >
                   <img
-                    src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66e31db1c23c150da790b0b3_Threads.svg"
+                    src="Threads.svg"
                     loading="lazy"
                     alt=""
                     className="image"
@@ -68,7 +58,7 @@ export function Footer() {
               </div>
             </div>
             <a
-              href="https://go.prowly.com/pr_collective"
+              href=""
               target="_blank"
               className="bg-blue text-white rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw]"
             >
@@ -94,14 +84,14 @@ export function Footer() {
         </div>
         <div className="flex max-md:flex-col items-center gap-[1.042vw]">
           <a
-            href="https://prowly.com/terms-of-service/"
+            href=""
             target="_blank"
             className="text-dark-purple text-styles-content font-bold"
           >
             Legal info
           </a>
           <a
-            href="https://prowly.com/privacy-policy/"
+            href=""
             target="_blank"
             className="text-dark-purple text-styles-content font-bold"
           >
