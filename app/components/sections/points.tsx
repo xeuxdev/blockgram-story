@@ -20,7 +20,7 @@ export function PainPoints() {
         className="absolute inset-[30vw_-7vw_auto_auto] w-[27vw] pointer-events-none align-middle inline-block max-w-full z-10"
       />
 
-      <motion.div
+      <motion.section
         initial={{ y: 80 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
@@ -29,12 +29,12 @@ export function PainPoints() {
       >
         <div className="wrapper small text-white bg-purple">
           <div className="text-center">
-            <h3 className="text-styles-h1">Pain Points</h3>
+            <h3 className="text-styles-h1">Pain Points in Messaging</h3>
           </div>
         </div>
-      </motion.div>
+      </motion.section>
 
-      <motion.div
+      <motion.section
         initial={{ y: 80 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
@@ -46,32 +46,38 @@ export function PainPoints() {
             <div className="flex max-md:flex-col gap-[4.103vw] md:gap-[1.042vw]">
               <div className="flex flex-col gap-[1.042vw] w-full md:w-[35.365vw]">
                 <h4 className="text-styles-h2">
-                  Growing Pains in Telegram:{" "}
+                  Growing Pains in Messaging :{" "}
                   <span className="text-purple">
-                    Scams, Chaos, and Crypto Friction
+                    Security, Context, and Control
                   </span>
                 </h4>
               </div>
               <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] flex-1">
-                <div className="text-styles-h4">
-                  Telegram was never designed for crypto. It’s unsafe,
-                  unorganized, and inefficient, leaving users exposed to fraud
-                  and overwhelmed by chaos.
+                <div className="text-styles-content">
+                  Scams, spam, and noise have turned everyday messaging into a
+                  challenge. Fake accounts and phishing links erode trust, while
+                  constant notifications bury what truly matters. Without AI
+                  support, users struggle to keep up with group conversations,
+                  losing context and wasting time.
                 </div>
                 <div className="text-styles-content">
-                  <strong className="text-purple">95% </strong>
-                  of crypto users report being targeted by spam or scam bots on
-                  Telegram.
-                  <strong className="text-purple">0 </strong> native crypto
-                  tools exist, users rely on risky third-party bots.
-                  <strong className="text-purple">70% </strong> of users say
-                  they miss important updates in noisy groups.
+                  Over{" "}
+                  <strong className="text-purple">
+                    60% of people report facing scams each month,{" "}
+                  </strong>
+                  and more than{" "}
+                  <strong className="text-purple">
+                    40 % say group chats feel overwhelming.{" "}
+                  </strong>{" "}
+                  The lack of AI summaries, smart search, and real-time context
+                  leaves users drowning in information, proving the need for a
+                  safer and smarter platform.
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.section>
 
       <motion.div
         initial={{ y: 80 }}
@@ -139,14 +145,15 @@ export function PainPoints() {
                 <div className="text-purple flex-none w-auto md:w-[35.365vw]">
                   <div className="flex text-[34vw] md:text-[13.333vw]/[100%] -tracking-[0.104vw]">
                     <span counter-element="number" className=" preloader-count">
-                      43
+                      42
                     </span>
                     <span>%</span>
                   </div>
                 </div>
                 <div className="flex-1 max-md:text-center">
                   <div className="text-styles-h3 mobile-24">
-                    of crypto bros have experienced.
+                    of Telegram users say they miss important updates because of
+                    noisy notifications and endless group chatter.
                   </div>
                 </div>
               </div>
@@ -154,6 +161,42 @@ export function PainPoints() {
           </div>
         </div>
       </motion.div>
+
+      <motion.section
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-dark-purple"
+      >
+        <div className="wrapper">
+          <div className="paddings">
+            <div className="flex max-sm:flex-col items-end gap-[4.103vw] md:gap-[1.042vw]">
+              <div className="flex flex-col gap-[1.042vw] w-full md:w-[35.365vw]">
+                <h4 className="text-styles-h2">
+                  Users Double Down on{" "}
+                  <span className="alt text-purple">
+                    Smarter Messaging in 2024.
+                  </span>
+                </h4>
+              </div>
+              <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] flex-1">
+                {/* <div className="text-styles-h4">
+                  Top-tier coverage, measurable impact, and reporting efficiency
+                  take center stage
+                </div> */}
+                <div className="text-styles-content">
+                  People are demanding clarity, context, and security in their
+                  chats. The need for AI-powered summaries, trusted identity
+                  checks, and safe in-chat payments has surged. Blockgram puts
+                  these features front and center, helping users focus on what
+                  matters instead of drowning in noise.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
 
       <motion.div
         initial={{ y: 80 }}

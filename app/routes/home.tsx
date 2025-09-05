@@ -8,6 +8,7 @@ import { PainPoints } from "~/components/sections/points";
 import { TableOfContent } from "~/components/sections/table-of-content";
 import { Tools } from "~/components/sections/tools";
 import type { Route } from "./+types/home";
+import { AISection } from "~/components/sections/ai";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -27,6 +28,7 @@ export default function Home() {
         <Keys />
         <PainPoints />
         <Tools />
+        <AISection />
         <Features />
         <About />
         <Footer />
