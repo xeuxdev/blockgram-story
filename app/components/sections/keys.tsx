@@ -3,34 +3,43 @@ import { motion } from "framer-motion";
 
 const keyFindings = [
   {
-    title: "Scams & Spam are Everywhere",
+    title: "Scam Bots and Fake Accounts",
     description:
-      "Telegram is flooded with scam bots, fake accounts, and phishing links. Users are exposed to constant spam DMs and unsafe files. Trust is low and users risk losing funds daily",
+      "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over **60% of people say they face scam attempts every month**.",
   },
   {
-    title: "Not Crypto-Native",
+    title: "Risky Payments",
     description:
-      "Despite being the main hub for the crypto community, Telegram has no built-in wallet or trading features. Users must rely on insecure bots or third-party apps to send tokens.Friction, higher scam exposure, and missed opportunities for seamless crypto transactions.",
+      "Copying and pasting wallet addresses is still the norm. A single mistake can cost users their money instantly.",
   },
   {
-    title: "Message Overload = Missed Opportunities",
+    title: "Missing AI Assistance",
     description:
-      "20k+ member groups push hundreds of messages in minutes. Vital updates from KOLs and devs get buried under noise. Users miss alpha, fail to act on time, and drop engagement.",
+      "Telegram leaves users drowning in information. There are no AI summaries, no contextual search, and no way to “ask the chat” for quick answers.",
   },
   {
-    title: "No Identity Verification",
+    title: "Forgotten Chats",
     description:
-      "Anyone can pretend to be a KOL, dev, or project lead. Impersonator scams are rampant.Communities cannot reliably trust who they are interacting with.",
+      "Catching up in an active group is almost impossible. Hundreds of unread messages mean wasted time and missed context.",
   },
   {
-    title: "Poor Productivity Tools",
-    description:
-      "No reminders, scheduling, or smart notifications. Following up on tasks is chaotic. Communities remain disorganized and miss key moments.",
+    title: "Question Card",
+    description: "Do you feel Telegram has become too overwhelming to manage?",
   },
   {
-    title: "Limited Accounts, Limited Control",
+    title: "Identity Confusion",
     description:
-      "Account restrictions make it hard to manage multiple projects. Community managers and power users struggle with switching. Fragmented workflows and lost efficiency.",
+      "Anyone can pretend to be a KOL or project lead. Communities spend hours verifying who is real and who is not.",
+  },
+  {
+    title: "Notification Overload",
+    description:
+      "Important messages get buried under endless pings. There is no smart way to prioritize what really matters.",
+  },
+  {
+    title: "Too Many Accounts",
+    description:
+      "Power users juggle work groups, trading accounts, and communities separately. Telegram gives no easy way to unify or manage them.",
   },
 ];
 
@@ -97,11 +106,19 @@ export function Keys() {
                             <div className="text-styles-h4">{item.title}</div>
                           </div>
                           <div className="text-styles-content">
-                            {item.description}
+                            {item.description
+                              .split(/\*\*(.*?)\*\*/g)
+                              .map((part, i) =>
+                                i % 2 === 1 ? (
+                                  <strong key={i}>{part}</strong>
+                                ) : (
+                                  part
+                                )
+                              )}
                           </div>
                         </div>
 
-                        {index === 1 && <QuestionCard />}
+                        {/* {index === 1 && <QuestionCard />} */}
                       </div>
                     );
                   })}

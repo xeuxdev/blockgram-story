@@ -28,7 +28,7 @@ export function Tools() {
         <div className="wrapper small text-white bg-red">
           <div className="text-center">
             <h3 className="text-styles-h1">
-              Use of <span className="alt">Blockgram</span>
+              Use of <span className="alt">Blockgram Tools</span>
             </h3>
           </div>
         </div>
@@ -96,15 +96,9 @@ export function Tools() {
               {/* under */}
               <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] *:md:text-center mt-[2vw] md:w-[52vw] mx-auto">
                 <div className="text-styles-h4">
-                  While <strong className="text-orange font-bold">72%</strong>{" "}
-                  of crypto users still rely on Telegram, frustration is growing
-                  over scams, chaos, and missing crypto features. Early adopters
-                  are turning to Blockgram, where security, trust, and
-                  productivity are built-in.
-                </div>
-                <div className="text-styles-content">
-                  The divide is clear: Telegram is a chat app. Blockgram is the
-                  crypto-native communication platform.
+                  <strong className="text-orange font-bold">72%</strong> of
+                  users want AI tools built directly into their messaging app
+                  instead of relying on third party bots or plugins
                 </div>
               </div>
             </div>
@@ -112,7 +106,7 @@ export function Tools() {
         </div>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         className="section_title-desc"
         initial={{ y: 80 }}
         whileInView={{ y: 0 }}
@@ -158,10 +152,10 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* impact */}
-      <motion.div
+      {/* <motion.div
         className="section_title-desc"
         initial={{ y: 80 }}
         whileInView={{ y: 0 }}
@@ -208,7 +202,7 @@ export function Tools() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* measure */}
 
@@ -225,10 +219,8 @@ export function Tools() {
               <div className="w-[49vw] mx-auto">
                 <div className="text-center mobile-short">
                   <h5 className="text-styles-h3">
-                    Do you measure{" "}
-                    <span className="alt text-red">
-                      your efficiency on telegram?
-                    </span>
+                    Do you need AI assistance{" "}
+                    <span className="alt text-red">in Telegram?</span>
                   </h5>
                 </div>
               </div>
@@ -278,28 +270,16 @@ export function Tools() {
                 </div>
               </div>
               <div className="title-desc_right-desc">
-                <div className="text-styles-h4">Metrics that matter</div>
-                <div className="text-styles-content">
-                  The landscape of crypto communication is shifting, with a
-                  notable rise in tracking meaningful outcomes inside chats,
-                  from{" "}
-                  <span className="text-orange">
-                    <strong>14%</strong>
-                  </span>{" "}
-                  in 2023 to{" "}
-                  <span className="text-orange">
-                    <strong>21%</strong>
-                  </span>{" "}
-                  in 2024. This highlights a growing expectation for communities
-                  to measure real engagement, token flow, and KOL impact instead
-                  of drowning in noise.
+                <div className="text-styles-h4">
+                  Smarter tools take center stage
                 </div>
                 <div className="text-styles-content">
-                  As users move beyond Telegram&apos;s unstructured chaos,
-                  they&apos;re embracing Blockgram&apos;s AI summaries,
-                  token-holder badges, and smart notifications tools that make
-                  communication not just faster, but measurable and
-                  results-driven.
+                  With Blockgram, AI features are not an add on but a core part
+                  of the experience. From instant chat summaries to scam
+                  detection and profile verification, users get the clarity and
+                  safety they have been asking for. The shift is clear, people
+                  now expect their messaging app to be intelligent, secure, and
+                  designed around real conversations
                 </div>
               </div>
             </div>
