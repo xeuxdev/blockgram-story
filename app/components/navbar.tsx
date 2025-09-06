@@ -17,19 +17,30 @@ const nav_links = [
   { number: "03", title: "Key Findings", href: "#keys", color: "light-purple" },
   {
     number: "04",
-    title: "Pain Points",
+    title: "Pain Points in Messaging",
     href: "#points",
     color: "purple",
   },
-  { number: "05", title: "The Use of Blockgram", href: "#tools", color: "red" },
+  {
+    number: "05",
+    title: "The Use of Blockgram Tools",
+    href: "#tools",
+    color: "red",
+  },
   {
     number: "06",
-    title: "Features in Blockgram",
+    title: "AI in Blockgram: Promise or Pitfall",
+    href: "#ai",
+    color: "green",
+  },
+  {
+    number: "07",
+    title: "How Will Chat Roles Change Next Year",
     href: "#features",
     color: "blue",
   },
   {
-    number: "07",
+    number: "08",
     title: "About Blockgram",
     href: "#blockgram",
     color: "light-purple",
@@ -113,7 +124,7 @@ export function Navbar() {
 
   const getLinkClasses = (link: (typeof nav_links)[0], isActive: boolean) => {
     const baseClasses =
-      "flex transition-all duration-300 gap-[0.5vw] border-[0.104vw] border-dark-purple rounded-[0.833vw] items-center py-[1.042vw] pl-[1.042vw]";
+      "flex transition-all items-start duration-300 gap-[0.5vw] border-[0.104vw] border-dark-purple rounded-[0.833vw] py-[1.042vw] px-[1.042vw]";
 
     if (!isActive) {
       return baseClasses;
@@ -297,14 +308,8 @@ export function Navbar() {
       </div>
 
       {/* desktop */}
-      <div className="flex sticky top-[1.5vw] h-auto w-[18vw] flex-col gap-[.5vw] max-md:hidden">
+      <div className="flex sticky top-[0.5vw] h-auto w-[18vw] flex-col gap-[.5vw] max-md:hidden">
         <Link to="#" className="inline-block text-[3vw] font-main">
-          {/* <img
-            src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d6db329ed60108107185e2_logo.svg"
-            loading="lazy"
-            alt=""
-            className="image"
-          /> */}
           Blockgram
         </Link>
 
@@ -317,12 +322,10 @@ export function Navbar() {
               onClick={() => handleLinkClick(link.href)}
               className={getLinkClasses(link, isActive)}
             >
-              <div className="w-[1.3vw]">
-                <div className="font-main text-[1.042vw] font-medium leading-[145%]">
-                  {link.number}
-                </div>
-              </div>
               <div className="font-main text-[1.042vw] font-medium leading-[145%]">
+                {link.number}
+              </div>
+              <div className="font-main text-[1.042vw] font-medium leading-[145%] text-left">
                 {link.title}
               </div>
             </button>

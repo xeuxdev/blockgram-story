@@ -3,48 +3,38 @@ import { cn } from "~/lib/utils";
 
 const chartData = [
   {
-    label: "Staying safe from scam bots & impersonators",
-    percentage: 52,
+    label: "safer chats without scam bots or impersonators",
+    percentage: 51,
     color: "bg-purple",
   },
   {
-    label: "Having native crypto transfers inside chats",
-    percentage: 41,
+    label: "AI tools to summarize and organize conversations",
+    percentage: 39,
     color: "bg-purple",
   },
   {
-    label: "Reducing noise and organizing groups better",
-    percentage: 36,
-    color: "bg-purple",
-  },
-  {
-    label: "Managing multiple accounts seamlessly",
+    label: "clearer identity checks so they know who is real",
     percentage: 33,
     color: "bg-purple",
   },
   {
-    label: "Getting smarter, prioritized notifications",
-    percentage: 25,
+    label: "to manage group chats more efficiently",
+    percentage: 32,
     color: "bg-purple",
   },
   {
-    label: "Access to reliable video calls & scheduling",
-    percentage: 21,
+    label: "payments and transactions built into the chat",
+    percentage: 22,
     color: "bg-purple",
   },
   {
-    label: "Safer file sharing with built-in malware checks",
-    percentage: 18,
+    label: "smarter notifications that highlight what matters",
+    percentage: 19,
     color: "bg-purple",
   },
   {
-    label: "Having chats auto-summarized by AI",
-    percentage: 12,
-    color: "bg-purple",
-  },
-  {
-    label: "Other improvements",
-    percentage: 6,
+    label: "other small improvements",
+    percentage: 5,
     color: "bg-purple",
   },
 ];
@@ -103,7 +93,7 @@ export function BarChart() {
               >
                 {/* Label */}
                 <div className="mt-4 text-center max-w-[140px]">
-                  <p className="text-sm font-medium text-gray-800 leading-tight">
+                  <p className="text-sm font-medium text-gray-800 leading-tight first-letter:capitalize">
                     {item.label}
                   </p>
                 </div>

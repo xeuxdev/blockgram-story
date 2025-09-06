@@ -32,27 +32,25 @@ export function About() {
           <div className="paddings">
             <div className="md:w-[55vw] flex flex-col gap-[1.667vw]">
               <div className="text-styles-h4">
-                We&apos;re a technology company that has created an all-in-one
-                communication platform built on the Telegram API — designed
-                specifically for crypto-native communities. Blockgram helps
-                traders, investors, KOLs, and project teams connect securely
-                through AI-driven protection, verified identities, seamless
-                token transfers, and powerful productivity tools.
+                We created Blockgram to be the next evolution of Telegram. It
+                keeps the same familiar design but is rebuilt to be smarter,
+                safer, and more powerful. Our goal is simple: give people the
+                tools they need out of the box without relying on bots or risky
+                add ons.
               </div>
               <div className="text-styles-h4 secondary">
-                Thanks to Blockgram, users can build trust, efficiency, and
-                growth inside their communities, whether it&apos;s preventing
-                scams with impersonator checks, staying organized with smart
-                folders, or enabling direct in-chat trading with token tickers.
-                Everything crypto communities need, natively in one app.
+                We built AI powered chat summaries, scam detection, verified
+                badges, and smarter notifications to solve the chaos of group
+                conversations. We added in chat payments and token features so
+                transactions can be as seamless as sending a message. We also
+                designed better moderation and identity tools so communities can
+                grow with confidence.
               </div>
               <div className="text-styles-h4 secondary">
-                The solution has been rapidly adopted across global crypto
-                networks, with early adoption showing thousands of users across
-                multiple countries, and strong traction among power users,
-                whales, and community leaders. Blockgram is redefining what
-                crypto communication should be: secure, organized, and
-                crypto-native.
+                Blockgram is not just a new app. It is a step forward for
+                messaging itself. We are focused on creating an experience that
+                feels fast, intuitive, and secure for everyone, from casual
+                users to global communities.
               </div>
               <a
                 href="https://blockgram-landing.vercel.app/"

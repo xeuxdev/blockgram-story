@@ -3,34 +3,46 @@ import { motion } from "framer-motion";
 
 const keyFindings = [
   {
-    title: "Scams & Spam are Everywhere",
+    title: "Scam Bots and Fake Accounts",
     description:
-      "Telegram is flooded with scam bots, fake accounts, and phishing links. Users are exposed to constant spam DMs and unsafe files. Trust is low and users risk losing funds daily",
+      "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over **60% of people say they face scam attempts every month**.",
+    image: "/keys/Scam bots.png",
   },
   {
-    title: "Not Crypto-Native",
+    title: "Risky Payments",
     description:
-      "Despite being the main hub for the crypto community, Telegram has no built-in wallet or trading features. Users must rely on insecure bots or third-party apps to send tokens.Friction, higher scam exposure, and missed opportunities for seamless crypto transactions.",
+      "Copying and pasting wallet addresses is still the norm. A single mistake can cost users their money instantly.",
+    image: "/keys/Risky payments.png",
   },
   {
-    title: "Message Overload = Missed Opportunities",
+    title: "Missing AI Assistance",
     description:
-      "20k+ member groups push hundreds of messages in minutes. Vital updates from KOLs and devs get buried under noise. Users miss alpha, fail to act on time, and drop engagement.",
+      "Telegram leaves users drowning in information. There are no AI summaries, no contextual search, and no way to “ask the chat” for quick answers.",
+    image: "/keys/Missing AI assistance.png",
   },
   {
-    title: "No Identity Verification",
+    title: "Forgotten Chats",
     description:
-      "Anyone can pretend to be a KOL, dev, or project lead. Impersonator scams are rampant.Communities cannot reliably trust who they are interacting with.",
+      "Catching up in an active group is almost impossible. Hundreds of unread messages mean wasted time and missed context.",
+    image: "/keys/Forgotten chats.png",
   },
   {
-    title: "Poor Productivity Tools",
+    title: "Identity Confusion",
     description:
-      "No reminders, scheduling, or smart notifications. Following up on tasks is chaotic. Communities remain disorganized and miss key moments.",
+      "Anyone can pretend to be a KOL or project lead. Communities spend hours verifying who is real and who is not.",
+    image: "/keys/Identity Confusion.png",
   },
   {
-    title: "Limited Accounts, Limited Control",
+    title: "Notification Overload",
     description:
-      "Account restrictions make it hard to manage multiple projects. Community managers and power users struggle with switching. Fragmented workflows and lost efficiency.",
+      "Important messages get buried under endless pings. There is no smart way to prioritize what really matters.",
+    image: "/keys/Notification Overload.png",
+  },
+  {
+    title: "Too Many Accounts",
+    description:
+      "Power users juggle work groups, trading accounts, and communities separately. Telegram gives no easy way to unify or manage them.",
+    image: "/keys/Too Many Accounts.png",
   },
 ];
 
@@ -87,21 +99,29 @@ export function Keys() {
                         key={Math.random() + index}
                       >
                         <img
-                          src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebeb9cd3a09bec94bb2b_keys%201.svg"
+                          src={item.image}
                           loading="eager"
                           alt=""
-                          className="image"
+                          className="image aspect-video"
                         />
-                        <div className="keys-card_content">
+                        <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
                           <div className="keys-card_title">
                             <div className="text-styles-h4">{item.title}</div>
                           </div>
                           <div className="text-styles-content">
-                            {item.description}
+                            {item.description
+                              .split(/\*\*(.*?)\*\*/g)
+                              .map((part, i) =>
+                                i % 2 === 1 ? (
+                                  <strong key={i}>{part}</strong>
+                                ) : (
+                                  part
+                                )
+                              )}
                           </div>
                         </div>
 
-                        {index === 1 && <QuestionCard />}
+                        {index === 4 && <QuestionCard />}
                       </div>
                     );
                   })}
@@ -160,7 +180,7 @@ function QuestionCard() {
       }}
     >
       <div className="text-styles-h3">
-        Did you struggle with&nbsp;a tight budget this year?
+        Do you feel Telegram has become too overwhelming to manage?
       </div>
       <div className="flex gap-[1.667vw] md:gap-[0.625vw] items-center justify-center *:cursor-pointer">
         <div
