@@ -279,10 +279,11 @@ input[type="file"]:focus-visible {
 .custom-scrollbar::-webkit-scrollbar {
   width: 0.729vw;
   height: 0.729vw;
+  background-color: #f0f0f0;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: white;
+  background: #f0f0f0;
   border-radius: 9999px;
 }
 
@@ -319,5 +320,5 @@ input[type="file"]:focus-visible {
 /* Firefox scrollbar support */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: var(--dark-purple) white;
+  scrollbar-color: #f0f0f0;
 }

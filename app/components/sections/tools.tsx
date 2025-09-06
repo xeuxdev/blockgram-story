@@ -225,9 +225,9 @@ export function Tools() {
                 </div>
               </div>
               <img
-                src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d2242cf525bcb4b9a9478a_Chart.svg"
+                src="/assistance.png"
                 loading="lazy"
-                alt="Chart: yes - 75%, no - 25%"
+                alt="Chart: yes - 72%, no - 28%"
                 className="image"
               />
             </div>

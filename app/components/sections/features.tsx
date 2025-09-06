@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FeaturesVideosSection } from "./features-2";
 
 const features = [
   {
@@ -109,6 +110,8 @@ export function Features() {
           </div>
         </div>
       </motion.div>
+
+      <FeaturesVideosSection />
     </motion.section>
   );
 }
