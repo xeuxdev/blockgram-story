@@ -13,11 +13,6 @@ export const PRChallengesChart = () => {
           value: 48,
           color: "bg-[#bbaffc]",
         },
-        {
-          year: "Maybe",
-          value: 57,
-          color: "bg-[#ddd7fe]",
-        },
       ],
     },
     {
@@ -32,11 +27,6 @@ export const PRChallengesChart = () => {
           year: "No",
           value: 52,
           color: "bg-[#bbaffc]",
-        },
-        {
-          year: "Maybe",
-          value: 56,
-          color: "bg-[#ddd7fe]",
         },
       ],
     },
@@ -53,11 +43,6 @@ export const PRChallengesChart = () => {
           value: 44,
           color: "bg-[#bbaffc]",
         },
-        {
-          year: "Maybe",
-          value: 50,
-          color: "bg-[#ddd7fe]",
-        },
       ],
     },
     {
@@ -72,11 +57,6 @@ export const PRChallengesChart = () => {
           year: "No",
           value: 41,
           color: "bg-[#bbaffc]",
-        },
-        {
-          year: "Maybe",
-          value: 48,
-          color: "bg-[#ddd7fe]",
         },
       ],
     },
@@ -93,11 +73,6 @@ export const PRChallengesChart = () => {
           value: 47,
           color: "bg-[#bbaffc]",
         },
-        {
-          year: "Maybe",
-          value: 43,
-          color: "bg-[#ddd7fe]",
-        },
       ],
     },
     {
@@ -112,11 +87,6 @@ export const PRChallengesChart = () => {
           year: "No",
           value: 36,
           color: "bg-[#bbaffc]",
-        },
-        {
-          year: "Maybe",
-          value: 41,
-          color: "bg-[#ddd7fe]",
         },
       ],
     },
@@ -133,11 +103,6 @@ export const PRChallengesChart = () => {
           value: 25,
           color: "bg-[#bbaffc]",
         },
-        {
-          year: "Maybe",
-          value: 31,
-          color: "bg-[#ddd7fe]",
-        },
       ],
     },
     {
@@ -152,11 +117,6 @@ export const PRChallengesChart = () => {
           year: "No",
           value: 26,
           color: "bg-[#bbaffc]",
-        },
-        {
-          year: "Maybe",
-          value: 31,
-          color: "bg-[#ddd7fe]",
         },
       ],
     },
@@ -173,11 +133,6 @@ export const PRChallengesChart = () => {
           value: 29,
           color: "bg-[#bbaffc]",
         },
-        {
-          year: "Maybe",
-          value: 30,
-          color: "bg-[#ddd7fe]",
-        },
       ],
     },
     {
@@ -193,11 +148,6 @@ export const PRChallengesChart = () => {
           value: 28,
           color: "bg-[#bbaffc]",
         },
-        {
-          year: "Maybe",
-          value: 25,
-          color: "bg-[#ddd7fe]",
-        },
       ],
     },
   ];
@@ -205,7 +155,6 @@ export const PRChallengesChart = () => {
   const legendItems = [
     { year: "Yes", color: "bg-[#9889fb]" },
     { year: "No", color: "bg-[#bcaffb]" },
-    { year: "Maybe", color: "bg-[#ddd7fe]" },
   ];
 
   return (

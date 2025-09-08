@@ -77,19 +77,13 @@ export function Keys() {
             <div className="flex flex-col gap-[2.5vw]">
               {/* desktop */}
               <motion.div
-                className=" pb-[1rem] pr-[7.5vw] max-md:hidden overflow-x-scroll custom-scrollbar"
+                className="pb-[1rem] pr-[7.5vw] max-md:hidden overflow-x-scroll custom-scrollbar"
                 initial={{ y: 80, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div
-                  className="flex gap-[1.042vw]"
-                  style={{
-                    transitionDuration: "200ms",
-                    transform: "translate3d(0px, 0px, 0px)",
-                  }}
-                >
+                <div className="flex gap-[1.042vw]">
                   {keyFindings.map((item, index) => {
                     return (
                       <div
@@ -102,7 +96,7 @@ export function Keys() {
                           src={item.image}
                           loading="eager"
                           alt=""
-                          className="image aspect-video"
+                          className="image"
                         />
                         <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
                           <div className="keys-card_title">
