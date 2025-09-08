@@ -80,9 +80,9 @@ export function Tools() {
               <div className="flex justify-center">
                 <div className="flex md:w-[49vw] text-center flex-col gap-[4.103vw] md:gap-[1.042vw]">
                   <h5 className="text-styles-h3">
-                    Do you currently use{" "}
+                    Why Blockgram is{" "}
                     <strong className="alt text-orange">
-                      Telegram or Blockgram?
+                      Built for the Future
                     </strong>
                   </h5>
                 </div>
