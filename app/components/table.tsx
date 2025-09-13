@@ -176,10 +176,6 @@ const pointData = [
         year: "No",
         value: 48,
       },
-      {
-        year: "Maybe",
-        value: 57,
-      },
     ],
   },
   {
@@ -192,10 +188,6 @@ const pointData = [
       {
         year: "No",
         value: 52,
-      },
-      {
-        year: "Maybe",
-        value: 56,
       },
     ],
   },
@@ -210,10 +202,6 @@ const pointData = [
         year: "No",
         value: 44,
       },
-      {
-        year: "Maybe",
-        value: 50,
-      },
     ],
   },
   {
@@ -226,10 +214,6 @@ const pointData = [
       {
         year: "No",
         value: 41,
-      },
-      {
-        year: "Maybe",
-        value: 48,
       },
     ],
   },
@@ -244,10 +228,6 @@ const pointData = [
         year: "No",
         value: 47,
       },
-      {
-        year: "Maybe",
-        value: 43,
-      },
     ],
   },
   {
@@ -260,10 +240,6 @@ const pointData = [
       {
         year: "No",
         value: 36,
-      },
-      {
-        year: "Maybe",
-        value: 41,
       },
     ],
   },
@@ -278,10 +254,6 @@ const pointData = [
         year: "No",
         value: 25,
       },
-      {
-        year: "Maybe",
-        value: 31,
-      },
     ],
   },
   {
@@ -294,10 +266,6 @@ const pointData = [
       {
         year: "No",
         value: 26,
-      },
-      {
-        year: "Maybe",
-        value: 31,
       },
     ],
   },
@@ -312,10 +280,6 @@ const pointData = [
         year: "No",
         value: 29,
       },
-      {
-        year: "Maybe",
-        value: 30,
-      },
     ],
   },
   {
@@ -329,10 +293,6 @@ const pointData = [
         year: "No",
         value: 28,
       },
-      {
-        year: "Maybe",
-        value: 25,
-      },
     ],
   },
 ];
@@ -344,7 +304,7 @@ export function PointsTables() {
       <div className="overflow-auto lg:overflow-hidden bg-[#f0f0f0] -mx-[8vw] md:mx-0 px-[8vw] md:px-0">
         <div className="min-w-[800px] lg:min-w-0">
           {/* Header */}
-          <div className="grid grid-cols-4 bg-[#9889fb] rounded-t-[3vw] md:rounded-t-[1.067vw] overflow-hidden">
+          <div className="grid grid-cols-3 bg-[#9889fb] rounded-t-[3vw] md:rounded-t-[1.067vw] overflow-hidden">
             <div className="max-md:py-[1.5vw] flex items-center justify-center flex-1 p-[0.9vw_1vw]">
               <h3 className="text-white font-bold text-styles-content"></h3>
             </div>
@@ -354,11 +314,6 @@ export function PointsTables() {
             <div className="max-md:py-[1.5vw] flex items-center justify-center flex-1 p-[0.9vw_1vw] ">
               <h3 className="text-white font-bold text-styles-content">No</h3>
             </div>
-            <div className="max-md:py-[1.5vw] flex items-center justify-center flex-1 p-[0.9vw_1vw] ">
-              <h3 className="text-white font-bold text-styles-content">
-                Maybe
-              </h3>
-            </div>
           </div>
 
           {/* Table Body */}
@@ -366,7 +321,7 @@ export function PointsTables() {
             {pointData.map((row, index) => (
               <div
                 key={row.title}
-                className={cn("grid grid-cols-4 last:border-b-0 bg-white", {
+                className={cn("grid grid-cols-3 last:border-b-0 bg-white", {
                   "bg-[#f9f9f9]": index % 2 === 0,
                 })}
               >
@@ -375,24 +330,17 @@ export function PointsTables() {
                   {row.title}
                 </div>
 
-                {/* 2024 Column */}
+                {/* Yes Column */}
                 <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-dark-purple text-center">
                   <span className="text-styles-content flex-shrink-0">
                     {row.data[0].value}%
                   </span>
                 </div>
 
-                {/* 2023 Column */}
+                {/* No Column */}
                 <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-dark-purple text-center">
                   <span className="text-styles-content flex-shrink-0">
                     {row.data[1].value}%
-                  </span>
-                </div>
-
-                {/* 2022 */}
-                <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-dark-purple text-center">
-                  <span className="text-styles-content flex-shrink-0">
-                    {row.data[2].value}%
                   </span>
                 </div>
               </div>

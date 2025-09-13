@@ -77,19 +77,13 @@ export function Keys() {
             <div className="flex flex-col gap-[2.5vw]">
               {/* desktop */}
               <motion.div
-                className=" pb-[1rem] pr-[7.5vw] max-md:hidden overflow-x-scroll custom-scrollbar"
+                className="pb-[1rem] pr-[7.5vw] max-md:hidden overflow-x-scroll custom-scrollbar"
                 initial={{ y: 80, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div
-                  className="flex gap-[1.042vw]"
-                  style={{
-                    transitionDuration: "200ms",
-                    transform: "translate3d(0px, 0px, 0px)",
-                  }}
-                >
+                <div className="flex gap-[1.042vw]">
                   {keyFindings.map((item, index) => {
                     return (
                       <div
@@ -102,7 +96,7 @@ export function Keys() {
                           src={item.image}
                           loading="eager"
                           alt=""
-                          className="image aspect-video"
+                          className="image"
                         />
                         <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
                           <div className="keys-card_title">
@@ -139,11 +133,11 @@ export function Keys() {
                 <div className="flex w-auto -mx-[9.205vw] pl-[8.205vw] pr-[15vw] overflow-x-scroll py-4 static gap-[3.59vw] custom-scrollbar">
                   {keyFindings.map((item, index) => (
                     <div
-                      className="overflow-hidden relative gap-[5.641vw] md:gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] md:rounded-[1.25vw] flex flex-col md:p-[1.667vw] sm:w-full flex-none p-[6.641vw]"
+                      className="overflow-hidden relative gap-[5.641vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] flex flex-col sm:w-full flex-none p-[4.641vw]"
                       key={Math.random() + index}
                     >
                       <img
-                        src="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66d1ebf167b7ceeee72754d5_keys%202.svg"
+                        src={item.image}
                         loading="eager"
                         alt=""
                         className="image"
@@ -153,7 +147,15 @@ export function Keys() {
                           <div className="text-styles-h4">{item.title}</div>
                         </div>
                         <div className="text-styles-content">
-                          {item.description}
+                          {item.description
+                            .split(/\*\*(.*?)\*\*/g)
+                            .map((part, i) =>
+                              i % 2 === 1 ? (
+                                <strong key={i}>{part}</strong>
+                              ) : (
+                                part
+                              )
+                            )}
                         </div>
                       </div>
                       {index === 1 && <QuestionCard />}
