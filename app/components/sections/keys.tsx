@@ -92,14 +92,12 @@ export function Keys() {
                         aria-label={` ${index + 1} / ${keyFindings.length}`}
                         key={Math.random() + index}
                       >
-                        <div className="w-full h-[15vw] rounded-[0.625vw] overflow-hidden">
-                          <img
-                            src={item.image}
-                            loading="eager"
-                            alt=""
-                            className="w-full h-full object-cover object-center"
-                          />
-                        </div>
+                        <img
+                          src={item.image}
+                          loading="eager"
+                          alt=""
+                          className="image"
+                        />
                         <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
                           <div className="keys-card_title">
                             <div className="text-styles-h4">{item.title}</div>
@@ -138,14 +136,12 @@ export function Keys() {
                       className="overflow-hidden relative gap-[5.641vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] flex flex-col sm:w-full flex-none p-[4.641vw]"
                       key={Math.random() + index}
                     >
-                      <div className="w-full h-[50vw] rounded-[2vw] overflow-hidden">
-                        <img
-                          src={item.image}
-                          loading="eager"
-                          alt=""
-                          className="w-full h-full object-cover object-center"
-                        />
-                      </div>
+                      <img
+                        src={item.image}
+                        loading="eager"
+                        alt=""
+                        className="image"
+                      />
                       <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
                         <div className="keys-card_title">
                           <div className="text-styles-h4">{item.title}</div>
