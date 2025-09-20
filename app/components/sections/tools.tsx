@@ -288,7 +288,7 @@ export function Tools() {
               <video
                 src="use-of-blockgram-tools.mp4"
                 controls
-                poster="use-blockgram-tools.png"
+                poster="/use-blockgram-tools.png"
                 width="100%"
               ></video>
             </div>

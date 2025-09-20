@@ -90,7 +90,7 @@ export function AISection() {
               <video
                 src="meet-leo.mp4"
                 controls
-                poster="meet-leo.png"
+                poster="/meet-leo.png"
                 width="100%"
               ></video>
             </div>
