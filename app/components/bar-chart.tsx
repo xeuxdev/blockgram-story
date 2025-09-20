@@ -62,7 +62,7 @@ export function BarChart() {
                 <div className="relative w-full flex flex-col items-center justify-end h-full">
                   <div
                     className={cn(
-                      "w-full rounded-[2.5vw] md:rounded-[1.25vw] flex items-start justify-center pt-[2.5vw] md:pt-[0.8vw] relative min-h-[40px]",
+                      "w-full rounded-[2.5vw] md:rounded-[1.25vw] flex items-center justify-center relative min-h-[40px]",
                       item.color
                     )}
                     style={{ height: `max(${barHeight}%, 40px)` }}

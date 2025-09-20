@@ -88,8 +88,9 @@ export function AISection() {
           <div className="paddings">
             <div className="mt-[3vw] rounded-[1.667vw] overflow-hidden">
               <video
-                src="https://go.prowly.com/hubfs/State%20of%20PR%202024%20-%20Tonya%20McKenzie.mp4"
+                src="meet-leo.mp4"
                 controls
+                poster="/meet-leo.png"
                 width="100%"
               ></video>
             </div>
