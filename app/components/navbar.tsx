@@ -249,14 +249,14 @@ export function Navbar() {
                       ? link.color === "light-purple"
                         ? "bg-light-purple text-dark-purple"
                         : link.color === "purple"
-                        ? "bg-purple text-white"
-                        : link.color === "red"
-                        ? "bg-red text-white"
-                        : link.color === "green"
-                        ? "bg-green text-white"
-                        : link.color === "blue"
-                        ? "bg-blue text-white"
-                        : "bg-light-purple text-dark-purple"
+                          ? "bg-purple text-white"
+                          : link.color === "red"
+                            ? "bg-red text-white"
+                            : link.color === "green"
+                              ? "bg-green text-white"
+                              : link.color === "blue"
+                                ? "bg-blue text-white"
+                                : "bg-light-purple text-dark-purple"
                       : "bg-transparent text-dark-purple"
                   }`}
                   style={{
@@ -289,7 +289,7 @@ export function Navbar() {
               }}
             >
               <div className="font-main text-[3.5vw] font-medium leading-[145%]">
-                DOWNLOAD PDF
+                Get Started
               </div>
               <div className="size-[3vw] flex items-center justify-center">
                 <svg
@@ -309,7 +309,16 @@ export function Navbar() {
 
       {/* desktop */}
       <div className="flex sticky top-[0.5vw] h-auto w-[18vw] flex-col gap-[.5vw] max-md:hidden">
-        <Link to="#" className="inline-block text-[3vw] font-main">
+        <Link
+          to="#"
+          className=" text-[2.5vw] font-main flex items-center gap-[0.5vw]"
+        >
+          <img
+            src="/logo.png"
+            loading="lazy"
+            alt=""
+            className="w-[2.5vw] h-auto"
+          />
           Blockgram
         </Link>
 
@@ -334,7 +343,7 @@ export function Navbar() {
 
         <Link to="" target="_blank" className={getDownloadButtonClasses()}>
           <div className="font-main text-[1.042vw] font-medium leading-[145%]">
-            DOWNLOAD PDF
+            Get Started
           </div>
           <div className="size-[0.75vw] flex items-center justify-end mt-[0.25vw]">
             <svg

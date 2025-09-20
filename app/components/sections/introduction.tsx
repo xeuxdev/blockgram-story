@@ -19,11 +19,11 @@ export function Introduction() {
                 Blockgram
               </h1>
               <h2 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] -tracking-[0.068vw] font-ter">
-                The Telegram you love <br />
+                The Telegram you love
                 only smarter
               </h2>
             </div>
-            <div className="text-styles-h4">
+            <div className="text-styles-h4 w-[1500px]">
               Familiar design, but with AI, better UX, &amp; and built-in
               features you always wished <br /> Telegram had.
             </div>
