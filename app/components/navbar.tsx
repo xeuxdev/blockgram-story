@@ -345,16 +345,14 @@ export function Navbar() {
           <div className="font-main text-[1.042vw] font-medium leading-[145%]">
             Get Started
           </div>
-          <div className="size-[0.75vw] flex items-center justify-end mt-[0.25vw]">
-            <svg
-              width="100%"
-              height="auto"
-              viewBox="0 0 18 25"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13 11.5H18L9 21.5L0 11.5H5V0.5H13V11.5ZM14 22.5H4V24.5H14V22.5Z"></path>
-            </svg>
+        </Link>
+        <Link
+          to="https://blockgram.gitbook.io/blockgram-docs/about-blockgram/core-features/send-and-receive-crypto-in-chat"
+          target="_blank"
+          className={getDownloadButtonClasses()}
+        >
+          <div className="font-main text-[1.042vw] font-medium leading-[145%]">
+            Whitepaper
           </div>
         </Link>
       </div>
