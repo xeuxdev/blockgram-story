@@ -286,9 +286,9 @@ export function Tools() {
 
             <div className="mt-[3vw] rounded-[1.667vw]">
               <video
-                src="https://go.prowly.com/hubfs/State%20of%20PR%202024%20-%20Gini%20Dietrich.mp4"
+                src="use-of-blockgram-tools.mp4"
                 controls
-                poster="https://cdn.prod.website-files.com/66c4ce97200d379d7b04a094/66e83e53ac8cf6624b8746ef_Screenshot%202024-09-13%20at%2015.12.18.png"
+                poster="/use-blockgram-tools.png"
                 width="100%"
               ></video>
             </div>
