@@ -19,8 +19,7 @@ export function Introduction() {
                 Blockgram
               </h1>
               <h2 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] -tracking-[0.068vw] font-ter">
-                The Telegram you love
-                only smarter
+                The Telegram you love only smarter
               </h2>
             </div>
             <div className="text-styles-h4 md:w-[1500px]">
@@ -32,7 +31,7 @@ export function Introduction() {
           <img
             src="/hero-image.png"
             alt=""
-            className="absolute md:-bottom-[400px] -right-3 mix-blend-luminosity"
+            className="absolute md:w-[45vw] md:-bottom-[10vw] -right-[2vw] mix-blend-luminosity"
           />
         </div>
       </motion.section>
