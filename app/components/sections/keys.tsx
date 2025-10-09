@@ -126,9 +126,9 @@ export function Keys() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="wrapper small bg-[#2EA4DF]">
+        <div className="wrapper small bg-[#A8D6F3]">
           <div className="text-center">
-            <h3 className="text-styles-h1 text-white">
+            <h3 className="text-styles-h1">
               Key <span className="alt">Findings</span>
             </h3>
           </div>

@@ -33,7 +33,7 @@ export function AISection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="wrapper small bg-[#2EA4DF] text-white px-10">
+        <div className="wrapper small bg-green text-white px-10">
           <div className="text-center">
             <h3 className="text-styles-h1">
               AI in Blockgram: <span className="alt">Promise or Pitfall?</span>
@@ -55,9 +55,7 @@ export function AISection() {
               <div className="title-desc_left-title">
                 <h4 className="text-styles-h2">
                   People Deserve A Messaging App{" "}
-                  <span className="alt text-[#2EA4DF]">
-                    That Works For Them
-                  </span>
+                  <span className="alt text-green">That Works For Them</span>
                 </h4>
               </div>
               <div className="title-desc_right-desc">
@@ -133,7 +131,7 @@ function Skills() {
               <div className="flex md:w-[63vw] text-center flex-col gap-[1.042vw]">
                 <h5 className="text-styles-h3">
                   What skills will become more important for <br />
-                  <span className="alt text-[#2EA4DF]">
+                  <span className="alt text-green">
                     PR pros as AI becomes more prevalent in the industry?
                   </span>
                 </h5>
@@ -155,9 +153,7 @@ function Skills() {
                       key={item}
                       className={cn(
                         "bg-white rounded-full py-[1.282vw] px-[2.564vw] md:py-[0.521vw] md:px-[1.970vw] transition-all duration-250 text-center relative inline-block",
-                        isActive
-                          ? "bg-[#2EA4DF] text-white"
-                          : "text-dark-purple"
+                        isActive ? "bg-green text-white" : "text-dark-purple"
                       )}
                       role="tab"
                       onClick={() => setActiveTab(item)}

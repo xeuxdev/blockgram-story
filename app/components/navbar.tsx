@@ -6,15 +6,15 @@ const nav_links = [
     number: "01",
     title: "Introduction",
     href: "#introduction",
-    color: "light-purple",
+    color: "[#A8D6F3]",
   },
   {
     number: "02",
     title: "Table of Contents",
     href: "#table",
-    color: "light-purple",
+    color: "[#A8D6F3]",
   },
-  { number: "03", title: "Key Findings", href: "#keys", color: "light-purple" },
+  { number: "03", title: "Key Findings", href: "#keys", color: "[#A8D6F3]" },
   {
     number: "04",
     title: "Pain Points in Messaging",
@@ -43,7 +43,7 @@ const nav_links = [
     number: "08",
     title: "About Blockgram",
     href: "#blockgram",
-    color: "light-purple",
+    color: "[#A8D6F3]",
   },
 ];
 
@@ -130,20 +130,20 @@ export function Navbar() {
       return baseClasses;
     }
 
-    // Active state styling based on color - light-purple maintains text color, others get white text
+    // Active state styling based on color - [#A8D6F3] maintains text color, others get white text
     switch (link.color) {
-      case "light-purple":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+      case "[#A8D6F3]":
+        return `${baseClasses} bg-[#A8D6F3] text-dark-purple`;
       case "purple":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-purple text-white`;
       case "red":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-red text-white`;
       case "green":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-green text-white`;
       case "blue":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-blue text-white`;
       default:
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-[#A8D6F3] text-dark-purple`;
     }
   };
 
@@ -179,16 +179,16 @@ export function Navbar() {
 
     // Apply background color based on active section
     switch (activeLink.color) {
-      case "light-purple":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+      case "[#A8D6F3]":
+        return `${baseClasses} bg-[#A8D6F3] text-dark-purple`;
       case "purple":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-purple text-white`;
       case "red":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-red text-white`;
       case "green":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-green text-white`;
       case "blue":
-        return `${baseClasses} bg-[#2EA4DF] text-white`;
+        return `${baseClasses} bg-blue text-white`;
       default:
         return `${baseClasses} text-dark-purple bg-[#cfc9e1]`;
     }
@@ -246,8 +246,8 @@ export function Navbar() {
                   onClick={() => handleMobileLinkClick(link.href)}
                   className={`flex items-center gap-[3vw] py-[3vw] px-[2vw] border-[0.3vw] border-dark-purple rounded-[2vw] transition-all duration-300 ${
                     isActive
-                      ? link.color === "light-purple"
-                        ? "bg-light-purple text-dark-purple"
+                      ? link.color === "[#A8D6F3]"
+                        ? "bg-[#A8D6F3] text-dark-purple"
                         : link.color === "purple"
                         ? "bg-purple text-white"
                         : link.color === "red"
@@ -256,7 +256,7 @@ export function Navbar() {
                         ? "bg-green text-white"
                         : link.color === "blue"
                         ? "bg-blue text-white"
-                        : "bg-light-purple text-dark-purple"
+                        : "bg-[#A8D6F3] text-dark-purple"
                       : "bg-transparent text-dark-purple"
                   }`}
                   style={{
@@ -280,7 +280,7 @@ export function Navbar() {
             <Link
               to=""
               target="_blank"
-              className="flex justify-center items-center gap-[2vw] border-[0.3vw] border-dark-purple rounded-[100vw] py-[3vw] mt-[2vw] bg-light-purple text-dark-purple transition-all duration-300"
+              className="flex justify-center items-center gap-[2vw] border-[0.3vw] border-dark-purple rounded-[100vw] py-[3vw] mt-[2vw] bg-[#A8D6F3] text-dark-purple transition-all duration-300"
               style={{
                 animationDelay: `${nav_links.length * 50}ms`,
                 animation: isMobileMenuOpen

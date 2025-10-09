@@ -4,7 +4,7 @@ import { Link } from "react-router";
 export function Footer() {
   return (
     <footer className="footer-wrapper">
-      <div className="wrapper py-0! bg-[#2EA4DF]">
+      <div className="wrapper py-0! bg-[#A8D6F3]">
         <motion.div
           className="flex flex-col justify-between h-[60vw] md:h-[20vw] px-[1.563vw] pt-[5vw] md:pt-[2vw]"
           initial={{ y: 80, opacity: 0 }}
@@ -14,7 +14,7 @@ export function Footer() {
         >
           <div className="flex max-md:flex-col max-md:gap-[6vw] items-center justify-between pb-[2vw] mb-[2vw] md:border-b-[0.104vw] border-dark-purple">
             <div className="flex items-center max-md:flex-col gap-[2vw] md:gap-[1.042vw] text-dark-purple uppercase">
-              <div className="font-ter text-[4.103vw] md:text-[0.938vw]/[140%] text-white">
+              <div className="font-ter text-[4.103vw] md:text-[0.938vw]/[140%]">
                 Let’s stay in touch
               </div>
               <div className="flex gap-[5.128vw] md:gap-[1.042vw] items-center">
@@ -61,9 +61,9 @@ export function Footer() {
             <a
               href=""
               target="_blank"
-              className="bg-white text-white rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw]"
+              className="bg-[#2EA4DF] text-white rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw]"
             >
-              <div className="text-styles-content font-medium uppercase text-dark-purple">
+              <div className="text-styles-content font-medium uppercase">
                 join the community
               </div>
             </a>
@@ -80,11 +80,11 @@ export function Footer() {
                 alt=""
                 className="w-[70px] md:w-[80px]"
               />
-              <p className="text-[6vw] md:text-[2.5vw] font-medium text-white">
+              <p className="text-[6vw] md:text-[2.5vw] font-medium">
                 Blockgram
               </p>
             </Link>
-            <div className="text-styles-content font-bold text-white">
+            <div className="text-styles-content font-bold">
               © 2025 All rights reserved
             </div>
           </div>

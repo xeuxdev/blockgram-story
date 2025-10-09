@@ -11,14 +11,14 @@ export function About() {
       transition={{ duration: 0.6 }}
     >
       <motion.div
-        className="wrapper small bg-[#2EA4DF]"
+        className="wrapper small bg-[#A8D6F3]"
         initial={{ y: 80 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         <div className="text-center">
-          <h3 className="text-styles-h1 text-white">About Blockgram</h3>
+          <h3 className="text-styles-h1">About Blockgram</h3>
         </div>
       </motion.div>
 
