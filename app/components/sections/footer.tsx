@@ -61,7 +61,7 @@ export function Footer() {
             <a
               href=""
               target="_blank"
-              className="bg-blue text-white rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw]"
+              className="bg-[#2EA4DF] text-white rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw]"
             >
               <div className="text-styles-content font-medium uppercase">
                 join the community

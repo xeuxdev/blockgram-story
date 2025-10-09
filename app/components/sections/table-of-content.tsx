@@ -60,7 +60,7 @@ export function TableOfContent() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="wrapper small bg-[#cfc9e1]">
+        <div className="wrapper small bg-[#2EA4DF]">
           <div className="text-center">
             <h3 className="text-styles-h1">
               Table of <span className="alt">Contents</span>

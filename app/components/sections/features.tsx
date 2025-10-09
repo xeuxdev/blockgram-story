@@ -61,7 +61,7 @@ export function Features() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="wrapper small bg-blue text-white">
+        <div className="wrapper small bg-[#2EA4DF] text-white">
           <div className="text-center">
             <h3 className="text-styles-h1">Features in Blockgram</h3>
           </div>
@@ -96,7 +96,7 @@ export function Features() {
               <div className="flex flex-col md:w-[34.167vw] gap-[4vw] md:gap-[2.5vw] h-full">
                 {features.map((item, index) => (
                   <div
-                    className={`bg-blue flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] ${
+                    className={`bg-[#2EA4DF] flex flex-col p-[6.154vw] md:p-[1.667vw] rounded-[6.154vw] md:rounded-[1.25vw] text-white border-[0.513vw] md:border-[0.104vw] border-dark-purple gap-[3.077vw] md:gap-[1.667vw] sticky top-[20vw] md:top-[4vw] ${
                       (index + 1) % 2 === 0 ? "rotate-2" : "-rotate-2"
                     }`}
                     key={item.id}

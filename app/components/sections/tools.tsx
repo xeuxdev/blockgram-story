@@ -25,7 +25,7 @@ export function Tools() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="wrapper small text-white bg-red">
+        <div className="wrapper small text-white bg-[#2EA4DF]">
           <div className="text-center">
             <h3 className="text-styles-h1">
               Use of <span className="alt">Blockgram Tools</span>
@@ -47,7 +47,7 @@ export function Tools() {
               <div className="flex flex-col md:w-[35.365vw] gap-[4.103vw] md:gap-[1.042vw]">
                 <h4 className="text-styles-h2">
                   Why You Should Use Blockgram:{" "}
-                  <strong className="alt text-orange">
+                  <strong className="alt text-[#2EA4DF]">
                     <br />
                     Solving Telegram&apos;s Flaws
                   </strong>
@@ -81,7 +81,7 @@ export function Tools() {
                 <div className="flex md:w-[49vw] text-center flex-col gap-[4.103vw] md:gap-[1.042vw]">
                   <h5 className="text-styles-h3">
                     Why Blockgram is{" "}
-                    <strong className="alt text-orange">
+                    <strong className="alt text-[#2EA4DF]">
                       Built for the Future
                     </strong>
                   </h5>
@@ -96,7 +96,7 @@ export function Tools() {
               {/* under */}
               <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] *:md:text-center mt-[2vw] md:w-[52vw] mx-auto">
                 <div className="text-styles-h4">
-                  <strong className="text-orange font-bold">72%</strong> of
+                  <strong className="text-[#2EA4DF] font-bold">72%</strong> of
                   users want AI tools built directly into their messaging app
                   instead of relying on third party bots or plugins
                 </div>
@@ -105,104 +105,6 @@ export function Tools() {
           </div>
         </div>
       </motion.div>
-
-      {/* <motion.div
-        className="section_title-desc"
-        initial={{ y: 80 }}
-        whileInView={{ y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="wrapper">
-          <div className="paddings">
-            <div className="title-desc_wrapper">
-              <div className="title-desc_left-title">
-                <h6 className="text-styles-h4">
-                  More Crypto Users Find Efficiency in Blockgram, With Power
-                  Users Leading the Shift
-                </h6>
-                <div className="text-styles-content">
-                  Satisfaction with Telegram alternatives has surged, with{" "}
-                  <strong className="text-orange">65%</strong>
-                  of users reporting higher efficiency after moving to Blockgram
-                  in 2025, up from just{" "}
-                  <strong className="text-orange">38%</strong> in 2023. Power
-                  users and community leaders show the highest satisfaction,
-                  driven by AI spam filters, verified KOL badges, and in-chat
-                  token transfers that save time and reduce risks.
-                </div>
-                <div className="text-styles-content">
-                  By cutting scams, organizing chaos, and adding crypto-native
-                  features, Blockgram transforms messy Telegram workflows into
-                  secure, efficient, and productive communication.
-                </div>
-              </div>
-              <div className="title-desc_right-desc text-center">
-                <div className="flex">
-                  <div
-                    counter-element="number"
-                    className="text-styles-256 text-red"
-                  >
-                    65
-                  </div>
-                  <div className="text-styles-256 text-red">%</div>
-                </div>
-                <div className="text-styles-content bold">Efficiency Score</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div> */}
-
-      {/* impact */}
-      {/* <motion.div
-        className="section_title-desc"
-        initial={{ y: 80 }}
-        whileInView={{ y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="wrapper">
-          <div className="paddings">
-            <div className="title-desc_wrapper">
-              <div className="title-desc_left-title">
-                <h5 className="text-styles-h2">
-                  The Push for <br />
-                  <span className="alt text-orange">Proving Value</span>
-                </h5>
-              </div>
-              <div className="title-desc_right-desc">
-                <div className="text-styles-h4">
-                  More crypto users are tracking results, with an{" "}
-                  <strong className="text-orange">11%</strong> rise in just one
-                  year.
-                </div>
-                <div className="text-styles-content">
-                  The number of crypto communities measuring real outcomes
-                  inside chats has jumped from{" "}
-                  <span className="text-orange">
-                    <strong>62%</strong>
-                  </span>{" "}
-                  in 2023 to{" "}
-                  <span className="text-orange">
-                    <strong>73%</strong>
-                  </span>{" "}
-                  in 2024, thanks to Blockgram&apos;s AI summaries, smart
-                  folders, and token-holder badges. As scams and noise make
-                  traditional Telegram harder to trust, the demand to prove
-                  engagement, protect assets, and track conversations is
-                  stronger than ever.
-                </div>
-                <p className="text-styles-content">
-                  Blockgram is driving a shift towards data-driven, trusted
-                  communication, where every update, trade, and interaction can
-                  be measured for impact.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div> */}
 
       {/* measure */}
 
@@ -220,7 +122,7 @@ export function Tools() {
                 <div className="text-center mobile-short">
                   <h5 className="text-styles-h3">
                     Do you need AI assistance{" "}
-                    <span className="alt text-red">in Telegram?</span>
+                    <span className="alt text-[#2EA4DF]">in Telegram?</span>
                   </h5>
                 </div>
               </div>
@@ -248,7 +150,7 @@ export function Tools() {
             <div className="title-desc_wrapper items-center">
               <div className="title-desc_left-title">
                 <div className="bg-white rounded-[1.667vw] w-full md:w-[34vw] p-[1.667vw]">
-                  <div className="flex items-baseline gap-[0.521vw] text-[#ffb5a5] text-[19vw] md:text-[7vw]/[115%]">
+                  <div className="flex items-baseline gap-[0.521vw] text-[#2EA4DF] text-[19vw] md:text-[7vw]/[115%]">
                     <span counter-element="number" className="text-styles-176">
                       14
                     </span>
@@ -257,7 +159,7 @@ export function Tools() {
                       in 2023
                     </span>
                   </div>
-                  <div className="flex items-baseline gap-[0.521vw] pl-[1vw] text-[19vw] md:text-[7vw]/[115%] text-red">
+                  <div className="flex items-baseline gap-[0.521vw] pl-[1vw] text-[19vw] md:text-[7vw]/[115%] text-[#2EA4DF]">
                     <div className="text-styles-176">→</div>
                     <div counter-element="number" className="text-styles-176">
                       21

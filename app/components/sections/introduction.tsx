@@ -12,7 +12,7 @@ export function Introduction() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="wrapper bg-[#ac93be] h-[210vw] md:h-[44.583vw]">
+        <div className="wrapper bg-[#2EA4DF] h-[210vw] md:h-[44.583vw]">
           <div className="flex flex-col gap-[5.128vw] px-[6.154vw] md:gap-[1.667vw] pl-[4.167vw] max-md:pt-[16.4vw] relative z-10">
             <div className="hero_title">
               <h1 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] font-medium -tracking-[0.068vw]">
@@ -42,7 +42,7 @@ export function Introduction() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <div className="wrapper small bg-[#cfc9e1]">
+        <div className="wrapper small bg-[#2EA4DF]">
           <h3 className="text-styles-h1 text-center">Introduction</h3>
         </div>
       </motion.section>

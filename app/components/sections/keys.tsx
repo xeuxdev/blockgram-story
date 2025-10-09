@@ -97,7 +97,9 @@ function DraggableScroll({ children, className, ...props }: any) {
   return (
     <motion.div
       ref={scrollRef}
-      className={`${className} ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
+      className={`${className} ${
+        isDragging ? "cursor-grabbing" : "cursor-grab"
+      }`}
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.1}
@@ -124,7 +126,7 @@ export function Keys() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="wrapper small bg-[#cfc9e1]">
+        <div className="wrapper small bg-[#2EA4DF]">
           <div className="text-center">
             <h3 className="text-styles-h1">
               Key <span className="alt">Findings</span>
