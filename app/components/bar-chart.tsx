@@ -5,37 +5,37 @@ const chartData = [
   {
     label: "safer chats without scam bots or impersonators",
     percentage: 51,
-    color: "bg-[#2EA4DF]",
+    color: "bg-purple",
   },
   {
     label: "AI tools to summarize and organize conversations",
     percentage: 39,
-    color: "bg-[#2EA4DF]",
+    color: "bg-purple",
   },
   {
     label: "clearer identity checks so they know who is real",
     percentage: 33,
-    color: "bg-[#2EA4DF]",
+    color: "bg-purple",
   },
   {
     label: "to manage group chats more efficiently",
     percentage: 32,
-    color: "bg-[#2EA4DF]",
+    color: "bg-purple",
   },
   {
     label: "payments and transactions built into the chat",
     percentage: 22,
-    color: "bg-[#2EA4DF]",
+    color: "bg-purple",
   },
   {
     label: "smarter notifications that highlight what matters",
     percentage: 19,
-    color: "bg-[#2EA4DF]",
+    color: "bg-purple",
   },
   {
     label: "other small improvements",
     percentage: 5,
-    color: "bg-[#2EA4DF]",
+    color: "bg-purple",
   },
 ];
 

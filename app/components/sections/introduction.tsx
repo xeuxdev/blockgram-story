@@ -42,10 +42,8 @@ export function Introduction() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <div className="wrapper small bg-[#2EA4DF]">
-          <h3 className="text-styles-h1 text-center text-white">
-            Introduction
-          </h3>
+        <div className="wrapper small bg-[#A8D6F3]">
+          <h3 className="text-styles-h1 text-center">Introduction</h3>
         </div>
       </motion.section>
 
