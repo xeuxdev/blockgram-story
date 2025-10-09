@@ -12,9 +12,9 @@ export function Introduction() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="wrapper bg-[#2EA4DF] h-[210vw] md:h-[44.583vw]">
+        <div className="wrapper bg-blue h-[210vw] md:h-[44.583vw]">
           <div className="flex flex-col gap-[5.128vw] px-[6.154vw] md:gap-[1.667vw] pl-[4.167vw] max-md:pt-[16.4vw] relative z-10">
-            <div className="hero_title">
+            <div className="hero_title text-white">
               <h1 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] font-medium -tracking-[0.068vw]">
                 Blockgram
               </h1>
@@ -22,7 +22,7 @@ export function Introduction() {
                 The Telegram you love only smarter
               </h2>
             </div>
-            <div className="text-styles-h4 md:w-[1500px]">
+            <div className="text-styles-h4 md:w-[1500px] text-white">
               Familiar design, but with AI, better UX, &amp; and built-in
               features you always wished <br /> Telegram had.
             </div>
