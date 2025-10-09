@@ -1,18 +1,33 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export function Introduction() {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Transform scroll progress to movement values
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, -300]);
+  const imageX = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const imageOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.5, 0]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
+
   return (
     <section
       className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]"
       id="introduction"
     >
       <motion.section
+        ref={heroRef}
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="wrapper bg-[#2EA4DF] h-[210vw] md:h-[44.583vw]">
+        <div className="wrapper bg-[#2EA4DF] h-[210vw] md:h-[44.583vw] overflow-hidden">
           <div className="flex flex-col gap-[5.128vw] px-[6.154vw] md:gap-[1.667vw] pl-[4.167vw] max-md:pt-[16.4vw] relative z-10">
             <div className="hero_title">
               <h1 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] font-medium -tracking-[0.068vw]">
@@ -28,10 +43,16 @@ export function Introduction() {
             </div>
           </div>
 
-          <img
+          <motion.img
             src="/hero-image-2.png"
             alt=""
             className="absolute md:w-[45vw] md:-bottom-[0vw] -right-[2vw] mix-blend-luminosity"
+            style={{
+              y: imageY,
+              x: imageX,
+              opacity: imageOpacity,
+              scale: imageScale,
+            }}
           />
         </div>
       </motion.section>
