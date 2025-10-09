@@ -1,38 +1,58 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export function Introduction() {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Transform scroll progress to movement values
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, -300]);
+  const imageX = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const imageOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.5, 0]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
+
   return (
     <section
       className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]"
       id="introduction"
     >
       <motion.section
+        ref={heroRef}
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="wrapper bg-[#ac93be] h-[210vw] md:h-[44.583vw]">
-          <div className="flex flex-col gap-[5.128vw] px-[6.154vw] md:gap-[1.667vw] pl-[4.167vw] max-md:pt-[16.4vw]">
+        <div className="wrapper bg-[#2EA4DF] h-[210vw] md:h-[44.583vw] overflow-hidden">
+          <div className="flex flex-col gap-[5.128vw] px-[6.154vw] md:gap-[1.667vw] pl-[4.167vw] max-md:pt-[16.4vw] relative z-10">
             <div className="hero_title">
               <h1 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] font-medium -tracking-[0.068vw]">
                 Blockgram
               </h1>
               <h2 className="text-[12.3vw]/[100%] md:text-[6.667vw]/[100%] -tracking-[0.068vw] font-ter">
-                The Telegram you love <br />
-                only smarter
+                The Telegram you love only smarter
               </h2>
             </div>
-            <div className="text-styles-h4">
+            <div className="text-styles-h4 md:w-[1500px]">
               Familiar design, but with AI, better UX, &amp; and built-in
               features you always wished <br /> Telegram had.
             </div>
           </div>
 
-          <img
-            src="/hero-image.svg"
+          <motion.img
+            src="/hero-image-2.png"
             alt=""
-            className="absolute bottom-0 -right-3 size-[120vw] md:size-[35vw]"
+            className="absolute md:w-[45vw] md:-bottom-[0vw] -right-[2vw] mix-blend-luminosity"
+            style={{
+              y: imageY,
+              x: imageX,
+              opacity: imageOpacity,
+              scale: imageScale,
+            }}
           />
         </div>
       </motion.section>
@@ -43,7 +63,7 @@ export function Introduction() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <div className="wrapper small bg-[#cfc9e1]">
+        <div className="wrapper small bg-[#A8D6F3]">
           <h3 className="text-styles-h1 text-center">Introduction</h3>
         </div>
       </motion.section>

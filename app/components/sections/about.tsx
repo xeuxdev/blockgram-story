@@ -11,7 +11,7 @@ export function About() {
       transition={{ duration: 0.6 }}
     >
       <motion.div
-        className="wrapper small bg-[#cfc9e1]"
+        className="wrapper small bg-[#A8D6F3]"
         initial={{ y: 80 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
@@ -55,7 +55,7 @@ export function About() {
               <a
                 href="https://blockgram-landing.vercel.app/"
                 target="_blank"
-                className="bg-blue text-white uppercase cursor-pointer rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw] duration-200 transition-all inline-block w-fit"
+                className="bg-[#2EA4DF] text-white uppercase cursor-pointer rounded-full py-[2.051vw] md:py-[0.625vw] px-[5.128vw] md:px-[2.5vw] duration-200 transition-all inline-block w-fit"
               >
                 <div className="text-styles-content font-bold">LEARN MORE</div>
               </a>

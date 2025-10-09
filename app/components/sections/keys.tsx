@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 
 const keyFindings = [
   {
@@ -46,6 +46,76 @@ const keyFindings = [
   },
 ];
 
+// Draggable scroll component
+function DraggableScroll({ children, className, ...props }: any) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = React.useState(false);
+  const [startX, setStartX] = React.useState(0);
+  const animationRef = useRef<number | null>(null);
+
+  const handleDragStart = () => {
+    if (scrollRef.current) {
+      setIsDragging(true);
+      setStartX(scrollRef.current.scrollLeft);
+    }
+  };
+
+  const handleDrag = (event: any, info: any) => {
+    if (scrollRef.current && isDragging) {
+      // Cancel any pending animation
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+
+      // Use requestAnimationFrame for smooth scrolling
+      animationRef.current = requestAnimationFrame(() => {
+        if (scrollRef.current) {
+          // Increased sensitivity: multiply drag movement by 3 for very responsive scrolling
+          const newScrollLeft = startX - info.offset.x * 3;
+          scrollRef.current.scrollLeft = newScrollLeft;
+        }
+      });
+    }
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+    if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current);
+    }
+  };
+
+  // Cleanup on unmount
+  React.useEffect(() => {
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <motion.div
+      ref={scrollRef}
+      className={`${className} ${
+        isDragging ? "cursor-grabbing" : "cursor-grab"
+      }`}
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.1}
+      dragMomentum={false}
+      onDragStart={handleDragStart}
+      onDrag={handleDrag}
+      onDragEnd={handleDragEnd}
+      dragPropagation={true}
+      dragControls={undefined}
+      {...props}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export function Keys() {
   return (
     <section id="keys" className="flex flex-col gap-[2.564vw] md:gap-[1.563vw]">
@@ -56,7 +126,7 @@ export function Keys() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="wrapper small bg-[#cfc9e1]">
+        <div className="wrapper small bg-[#A8D6F3]">
           <div className="text-center">
             <h3 className="text-styles-h1">
               Key <span className="alt">Findings</span>
@@ -77,49 +147,53 @@ export function Keys() {
             <div className="flex flex-col gap-[2.5vw]">
               {/* desktop */}
               <motion.div
-                className="pb-[1rem] pr-[7.5vw] max-md:hidden overflow-x-scroll custom-scrollbar"
                 initial={{ y: 80, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="flex gap-[1.042vw]">
-                  {keyFindings.map((item, index) => {
-                    return (
-                      <div
-                        className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none"
-                        role="group"
-                        aria-label={` ${index + 1} / ${keyFindings.length}`}
-                        key={Math.random() + index}
-                      >
-                        <img
-                          src={item.image}
-                          loading="eager"
-                          alt=""
-                          className="image"
-                        />
-                        <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
-                          <div className="keys-card_title">
-                            <div className="text-styles-h4">{item.title}</div>
+                <DraggableScroll
+                  className="pb-[1rem] pr-[7.5vw] max-md:hidden overflow-x-scroll custom-scrollbar select-none scroll-smooth"
+                  style={{ scrollBehavior: "auto" }}
+                >
+                  <div className="flex gap-[1.042vw]">
+                    {keyFindings.map((item, index) => {
+                      return (
+                        <div
+                          className="overflow-hidden relative gap-[2.5vw] border-[0.104vw] border-dark-purple rounded-[1.25vw] flex flex-col p-[1.667vw] w-[22.917vw] flex-none pointer-events-none"
+                          role="group"
+                          aria-label={` ${index + 1} / ${keyFindings.length}`}
+                          key={Math.random() + index}
+                        >
+                          <img
+                            src={item.image}
+                            loading="eager"
+                            alt=""
+                            className="image"
+                          />
+                          <div className="flex flex-col gap-[3vw] md:gap-[1.25vw]">
+                            <div className="keys-card_title">
+                              <div className="text-styles-h4">{item.title}</div>
+                            </div>
+                            <div className="text-styles-content">
+                              {item.description
+                                .split(/\*\*(.*?)\*\*/g)
+                                .map((part, i) =>
+                                  i % 2 === 1 ? (
+                                    <strong key={i}>{part}</strong>
+                                  ) : (
+                                    part
+                                  )
+                                )}
+                            </div>
                           </div>
-                          <div className="text-styles-content">
-                            {item.description
-                              .split(/\*\*(.*?)\*\*/g)
-                              .map((part, i) =>
-                                i % 2 === 1 ? (
-                                  <strong key={i}>{part}</strong>
-                                ) : (
-                                  part
-                                )
-                              )}
-                          </div>
-                        </div>
 
-                        {index === 4 && <QuestionCard />}
-                      </div>
-                    );
-                  })}
-                </div>
+                          {index === 4 && <QuestionCard />}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </DraggableScroll>
               </motion.div>
 
               {/* mobile */}
@@ -130,10 +204,13 @@ export function Keys() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="flex w-auto -mx-[9.205vw] pl-[8.205vw] pr-[15vw] overflow-x-scroll py-4 static gap-[3.59vw] custom-scrollbar">
+                <DraggableScroll
+                  className="flex w-auto -mx-[9.205vw] pl-[8.205vw] pr-[15vw] overflow-x-scroll py-4 static gap-[3.59vw] custom-scrollbar select-none scroll-smooth"
+                  style={{ scrollBehavior: "auto" }}
+                >
                   {keyFindings.map((item, index) => (
                     <div
-                      className="overflow-hidden relative gap-[5.641vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] flex flex-col sm:w-full flex-none p-[4.641vw]"
+                      className="overflow-hidden relative gap-[5.641vw] border-[0.104vw] border-dark-purple rounded-[4.103vw] w-[78vw] flex flex-col sm:w-full flex-none p-[4.641vw] pointer-events-none"
                       key={Math.random() + index}
                     >
                       <img
@@ -161,7 +238,7 @@ export function Keys() {
                       {index === 1 && <QuestionCard />}
                     </div>
                   ))}
-                </div>
+                </DraggableScroll>
               </motion.div>
             </div>
           </div>
@@ -176,7 +253,7 @@ function QuestionCard() {
 
   return (
     <div
-      className="absolute inset-0 z-10 gap-[4vw] md:gap-[2.083vw] bg-light-purple text-center flex-col flex px-[1.667vw] justify-center"
+      className="absolute inset-0 z-10 gap-[4vw] md:gap-[2.083vw] bg-light-purple text-center flex-col flex px-[1.667vw] justify-center pointer-events-auto"
       style={{
         display: open ? "flex" : "none",
       }}

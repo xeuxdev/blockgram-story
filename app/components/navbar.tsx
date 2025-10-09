@@ -6,15 +6,15 @@ const nav_links = [
     number: "01",
     title: "Introduction",
     href: "#introduction",
-    color: "light-purple",
+    color: "[#A8D6F3]",
   },
   {
     number: "02",
     title: "Table of Contents",
     href: "#table",
-    color: "light-purple",
+    color: "[#A8D6F3]",
   },
-  { number: "03", title: "Key Findings", href: "#keys", color: "light-purple" },
+  { number: "03", title: "Key Findings", href: "#keys", color: "[#A8D6F3]" },
   {
     number: "04",
     title: "Pain Points in Messaging",
@@ -43,7 +43,7 @@ const nav_links = [
     number: "08",
     title: "About Blockgram",
     href: "#blockgram",
-    color: "light-purple",
+    color: "[#A8D6F3]",
   },
 ];
 
@@ -130,10 +130,10 @@ export function Navbar() {
       return baseClasses;
     }
 
-    // Active state styling based on color - light-purple maintains text color, others get white text
+    // Active state styling based on color - [#A8D6F3] maintains text color, others get white text
     switch (link.color) {
-      case "light-purple":
-        return `${baseClasses} bg-light-purple text-dark-purple`;
+      case "[#A8D6F3]":
+        return `${baseClasses} bg-[#A8D6F3] text-dark-purple`;
       case "purple":
         return `${baseClasses} bg-purple text-white`;
       case "red":
@@ -143,7 +143,7 @@ export function Navbar() {
       case "blue":
         return `${baseClasses} bg-blue text-white`;
       default:
-        return `${baseClasses} bg-light-purple text-dark-purple`;
+        return `${baseClasses} bg-[#A8D6F3] text-dark-purple`;
     }
   };
 
@@ -179,8 +179,8 @@ export function Navbar() {
 
     // Apply background color based on active section
     switch (activeLink.color) {
-      case "light-purple":
-        return `${baseClasses} bg-light-purple text-dark-purple`;
+      case "[#A8D6F3]":
+        return `${baseClasses} bg-[#A8D6F3] text-dark-purple`;
       case "purple":
         return `${baseClasses} bg-purple text-white`;
       case "red":
@@ -246,8 +246,8 @@ export function Navbar() {
                   onClick={() => handleMobileLinkClick(link.href)}
                   className={`flex items-center gap-[3vw] py-[3vw] px-[2vw] border-[0.3vw] border-dark-purple rounded-[2vw] transition-all duration-300 ${
                     isActive
-                      ? link.color === "light-purple"
-                        ? "bg-light-purple text-dark-purple"
+                      ? link.color === "[#A8D6F3]"
+                        ? "bg-[#A8D6F3] text-dark-purple"
                         : link.color === "purple"
                         ? "bg-purple text-white"
                         : link.color === "red"
@@ -256,7 +256,7 @@ export function Navbar() {
                         ? "bg-green text-white"
                         : link.color === "blue"
                         ? "bg-blue text-white"
-                        : "bg-light-purple text-dark-purple"
+                        : "bg-[#A8D6F3] text-dark-purple"
                       : "bg-transparent text-dark-purple"
                   }`}
                   style={{
@@ -280,7 +280,7 @@ export function Navbar() {
             <Link
               to=""
               target="_blank"
-              className="flex justify-center items-center gap-[2vw] border-[0.3vw] border-dark-purple rounded-[100vw] py-[3vw] mt-[2vw] bg-light-purple text-dark-purple transition-all duration-300"
+              className="flex justify-center items-center gap-[2vw] border-[0.3vw] border-dark-purple rounded-[100vw] py-[3vw] mt-[2vw] bg-[#A8D6F3] text-dark-purple transition-all duration-300"
               style={{
                 animationDelay: `${nav_links.length * 50}ms`,
                 animation: isMobileMenuOpen
@@ -289,7 +289,7 @@ export function Navbar() {
               }}
             >
               <div className="font-main text-[3.5vw] font-medium leading-[145%]">
-                DOWNLOAD PDF
+                Get Started
               </div>
               <div className="size-[3vw] flex items-center justify-center">
                 <svg
@@ -309,7 +309,16 @@ export function Navbar() {
 
       {/* desktop */}
       <div className="flex sticky top-[0.5vw] h-auto w-[18vw] flex-col gap-[.5vw] max-md:hidden">
-        <Link to="#" className="inline-block text-[3vw] font-main">
+        <Link
+          to="#"
+          className=" text-[2.5vw] font-main flex items-center gap-[0.5vw]"
+        >
+          <img
+            src="/logo.png"
+            loading="lazy"
+            alt=""
+            className="w-[2.5vw] h-auto"
+          />
           Blockgram
         </Link>
 
@@ -334,18 +343,16 @@ export function Navbar() {
 
         <Link to="" target="_blank" className={getDownloadButtonClasses()}>
           <div className="font-main text-[1.042vw] font-medium leading-[145%]">
-            DOWNLOAD PDF
+            Get Started
           </div>
-          <div className="size-[0.75vw] flex items-center justify-end mt-[0.25vw]">
-            <svg
-              width="100%"
-              height="auto"
-              viewBox="0 0 18 25"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13 11.5H18L9 21.5L0 11.5H5V0.5H13V11.5ZM14 22.5H4V24.5H14V22.5Z"></path>
-            </svg>
+        </Link>
+        <Link
+          to="https://blockgram.gitbook.io/blockgram-docs/about-blockgram/core-features/send-and-receive-crypto-in-chat"
+          target="_blank"
+          className={getDownloadButtonClasses()}
+        >
+          <div className="font-main text-[1.042vw] font-medium leading-[145%]">
+            Whitepaper
           </div>
         </Link>
       </div>
