@@ -11,7 +11,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 48,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -26,7 +26,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 52,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -41,7 +41,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 44,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -56,7 +56,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 41,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -71,7 +71,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 47,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -86,7 +86,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 36,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -101,7 +101,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 25,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -116,7 +116,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 26,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -131,7 +131,7 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 29,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
@@ -146,15 +146,15 @@ export const PRChallengesChart = () => {
         {
           year: "No",
           value: 28,
-          color: "bg-[#2EA4DF90]",
+          color: "bg-[#2EA4DF98]",
         },
       ],
     },
   ];
 
   const legendItems = [
-    { year: "Yes", color: "bg-[#9889fb]" },
-    { year: "No", color: "bg-[#bcaffb]" },
+    { year: "Yes", color: "bg-[#2EA4DF]" },
+    { year: "No", color: "bg-[#2EA4DF98]" },
   ];
 
   return (

@@ -128,7 +128,7 @@ export function Tables() {
                 )}
               >
                 {/* Feature Column */}
-                <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-center flex items-center justify-center text-white bg-[#2EA4DF]/90 text-styles-content">
+                <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-center flex items-center justify-center text-white bg-[#2EA4DF98] text-styles-content">
                   {row.feature}
                 </div>
 
