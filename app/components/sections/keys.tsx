@@ -253,7 +253,7 @@ function QuestionCard() {
 
   return (
     <div
-      className="absolute inset-0 z-10 gap-[4vw] md:gap-[2.083vw] bg-light-purple text-center flex-col flex px-[1.667vw] justify-center pointer-events-auto"
+      className="absolute inset-0 z-10 gap-[4vw] md:gap-[2.083vw] bg-[#A8D6F3] text-center flex-col flex px-[1.667vw] justify-center pointer-events-auto"
       style={{
         display: open ? "flex" : "none",
       }}
