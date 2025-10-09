@@ -133,17 +133,17 @@ export function Navbar() {
     // Active state styling based on color - light-purple maintains text color, others get white text
     switch (link.color) {
       case "light-purple":
-        return `${baseClasses} bg-light-purple text-dark-purple`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       case "purple":
-        return `${baseClasses} bg-purple text-white`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       case "red":
-        return `${baseClasses} bg-red text-white`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       case "green":
-        return `${baseClasses} bg-green text-white`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       case "blue":
-        return `${baseClasses} bg-blue text-white`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       default:
-        return `${baseClasses} bg-light-purple text-dark-purple`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
     }
   };
 
@@ -180,15 +180,15 @@ export function Navbar() {
     // Apply background color based on active section
     switch (activeLink.color) {
       case "light-purple":
-        return `${baseClasses} bg-light-purple text-dark-purple`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       case "purple":
-        return `${baseClasses} bg-purple text-white`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       case "red":
-        return `${baseClasses} bg-red text-white`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       case "green":
-        return `${baseClasses} bg-green text-white`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       case "blue":
-        return `${baseClasses} bg-blue text-white`;
+        return `${baseClasses} bg-[#2EA4DF] text-white`;
       default:
         return `${baseClasses} text-dark-purple bg-[#cfc9e1]`;
     }
@@ -249,14 +249,14 @@ export function Navbar() {
                       ? link.color === "light-purple"
                         ? "bg-light-purple text-dark-purple"
                         : link.color === "purple"
-                          ? "bg-purple text-white"
-                          : link.color === "red"
-                            ? "bg-red text-white"
-                            : link.color === "green"
-                              ? "bg-green text-white"
-                              : link.color === "blue"
-                                ? "bg-blue text-white"
-                                : "bg-light-purple text-dark-purple"
+                        ? "bg-purple text-white"
+                        : link.color === "red"
+                        ? "bg-red text-white"
+                        : link.color === "green"
+                        ? "bg-green text-white"
+                        : link.color === "blue"
+                        ? "bg-blue text-white"
+                        : "bg-light-purple text-dark-purple"
                       : "bg-transparent text-dark-purple"
                   }`}
                   style={{

@@ -6,12 +6,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 34,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 48,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -21,12 +21,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 60,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 52,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -36,12 +36,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 46,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 44,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -51,12 +51,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 41,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 41,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -66,12 +66,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 35,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 47,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -81,12 +81,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 38,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 36,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -96,12 +96,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 30,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 25,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -111,12 +111,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 33,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 26,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -126,12 +126,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 32,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 29,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },
@@ -141,12 +141,12 @@ export const PRChallengesChart = () => {
         {
           year: "Yes",
           value: 12,
-          color: "bg-[#9888fb]",
+          color: "bg-[#2EA4DF]",
         },
         {
           year: "No",
           value: 28,
-          color: "bg-[#bbaffc]",
+          color: "bg-[#2EA4DF90]",
         },
       ],
     },

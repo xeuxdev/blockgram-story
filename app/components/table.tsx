@@ -99,7 +99,7 @@ export function Tables() {
       <div className="overflow-auto lg:overflow-hidden bg-[#f0f0f0] -mx-[8vw] md:mx-0 px-[8vw] md:px-0">
         <div className="min-w-[800px] lg:min-w-0">
           {/* Header */}
-          <div className="grid grid-cols-3 bg-red rounded-t-[3vw] md:rounded-t-[1.067vw] overflow-hidden">
+          <div className="grid grid-cols-3 bg-[#2EA4DF] rounded-t-[3vw] md:rounded-t-[1.067vw] overflow-hidden">
             <div className="max-md:py-[1.5vw] flex items-center justify-center flex-1 p-[0.9vw_1vw]">
               <h3 className="text-white font-bold text-styles-content">
                 Feature / Need
@@ -128,7 +128,7 @@ export function Tables() {
                 )}
               >
                 {/* Feature Column */}
-                <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-center flex items-center justify-center text-white bg-[#ffb5a5] text-styles-content">
+                <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-center flex items-center justify-center text-white bg-[#2EA4DF]/90 text-styles-content">
                   {row.feature}
                 </div>
 
@@ -304,7 +304,7 @@ export function PointsTables() {
       <div className="overflow-auto lg:overflow-hidden bg-[#f0f0f0] -mx-[8vw] md:mx-0 px-[8vw] md:px-0">
         <div className="min-w-[800px] lg:min-w-0">
           {/* Header */}
-          <div className="grid grid-cols-3 bg-[#9889fb] rounded-t-[3vw] md:rounded-t-[1.067vw] overflow-hidden">
+          <div className="grid grid-cols-3 bg-[#2EA4DF] rounded-t-[3vw] md:rounded-t-[1.067vw] overflow-hidden">
             <div className="max-md:py-[1.5vw] flex items-center justify-center flex-1 p-[0.9vw_1vw]">
               <h3 className="text-white font-bold text-styles-content"></h3>
             </div>
@@ -326,7 +326,7 @@ export function PointsTables() {
                 })}
               >
                 {/* Feature Column */}
-                <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-center flex items-center justify-center font-bold! bg-[#998afb80] text-styles-content">
+                <div className="px-[0.9vw] py-[1.5vw] md:py-[1vw] text-center flex items-center justify-center font-bold! bg-[#2EA4DF98] text-styles-content">
                   {row.title}
                 </div>
 

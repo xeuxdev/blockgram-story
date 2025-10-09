@@ -27,7 +27,7 @@ export function PainPoints() {
         transition={{ duration: 0.6 }}
         className="section_title"
       >
-        <div className="wrapper small text-white bg-purple">
+        <div className="wrapper small text-white bg-[#2EA4DF]">
           <div className="text-center">
             <h3 className="text-styles-h1">Pain Points in Messaging</h3>
           </div>
@@ -39,7 +39,7 @@ export function PainPoints() {
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-dark-purple"
+        className="text-dark-[#2EA4DF]"
       >
         <div className="wrapper">
           <div className="paddings">
@@ -47,7 +47,7 @@ export function PainPoints() {
               <div className="flex flex-col gap-[1.042vw] w-full md:w-[35.365vw]">
                 <h4 className="text-styles-h2">
                   Growing Pains in Messaging :{" "}
-                  <span className="text-purple">
+                  <span className="text-[#2EA4DF]">
                     Security, Context, and Control
                   </span>
                 </h4>
@@ -62,11 +62,11 @@ export function PainPoints() {
                 </div>
                 <div className="text-styles-content">
                   Over{" "}
-                  <strong className="text-purple">
+                  <strong className="text-[#2EA4DF]">
                     60% of people report facing scams each month,{" "}
                   </strong>
                   and more than{" "}
-                  <strong className="text-purple">
+                  <strong className="text-[#2EA4DF]">
                     40 % say group chats feel overwhelming.{" "}
                   </strong>{" "}
                   The lack of AI summaries, smart search, and real-time context
@@ -94,7 +94,7 @@ export function PainPoints() {
                 <div className="flex md:w-[49vw] text-center flex-col gap-[1.042vw]">
                   <h5 className="text-styles-h3">
                     Did you struggle with any of the{" "}
-                    <span className="alt text-purple">
+                    <span className="alt text-[#2EA4DF]">
                       following in the last 12 months?
                     </span>
                   </h5>
@@ -116,7 +116,9 @@ export function PainPoints() {
                         key={item}
                         className={cn(
                           "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
-                          isActive ? "bg-purple text-white" : "text-dark-purple"
+                          isActive
+                            ? "bg-[#2EA4DF] text-white"
+                            : "text-dark-[#2EA4DF]"
                         )}
                         role="tab"
                         onClick={() => setActiveTab(item)}
@@ -142,7 +144,7 @@ export function PainPoints() {
               {/* big num */}
 
               <div className="flex max-md:flex-col gap-[4.103vw] md:gap-[1.042vw] items-center">
-                <div className="text-purple flex-none w-auto md:w-[35.365vw]">
+                <div className="text-[#2EA4DF] flex-none w-auto md:w-[35.365vw]">
                   <div className="flex text-[34vw] md:text-[13.333vw]/[100%] -tracking-[0.104vw]">
                     <span counter-element="number" className=" preloader-count">
                       42
@@ -167,7 +169,7 @@ export function PainPoints() {
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-dark-purple"
+        className="text-dark-[#2EA4DF]"
       >
         <div className="wrapper">
           <div className="paddings">
@@ -175,16 +177,12 @@ export function PainPoints() {
               <div className="flex flex-col gap-[1.042vw] w-full md:w-[35.365vw]">
                 <h4 className="text-styles-h2">
                   Users Double Down on{" "}
-                  <span className="alt text-purple">
+                  <span className="alt text-[#2EA4DF]">
                     Smarter Messaging in 2024.
                   </span>
                 </h4>
               </div>
               <div className="flex flex-col gap-[4.103vw] md:gap-[1.042vw] flex-1">
-                {/* <div className="text-styles-h4">
-                  Top-tier coverage, measurable impact, and reporting efficiency
-                  take center stage
-                </div> */}
                 <div className="text-styles-content">
                   People are demanding clarity, context, and security in their
                   chats. The need for AI-powered summaries, trusted identity
@@ -213,7 +211,7 @@ export function PainPoints() {
                 <div className="flex md:w-[49vw] text-center flex-col gap-[1.042vw]">
                   <h5 className="text-styles-h3">
                     What's the one thing you'd most like{" "}
-                    <span className="alt text-purple">
+                    <span className="alt text-[#2EA4DF]">
                       to improve in your Telegram experience right now?
                     </span>
                   </h5>
