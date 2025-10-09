@@ -128,7 +128,7 @@ export function Keys() {
       >
         <div className="wrapper small bg-[#2EA4DF]">
           <div className="text-center">
-            <h3 className="text-styles-h1">
+            <h3 className="text-styles-h1 text-white">
               Key <span className="alt">Findings</span>
             </h3>
           </div>

@@ -118,7 +118,7 @@ export function PainPoints() {
                           "bg-white rounded-full py-[0.521vw] px-[1.970vw] transition-all duration-250 text-center relative inline-block",
                           isActive
                             ? "bg-[#2EA4DF] text-white"
-                            : "text-dark-[#2EA4DF]"
+                            : "text-[#2EA4DF]"
                         )}
                         role="tab"
                         onClick={() => setActiveTab(item)}

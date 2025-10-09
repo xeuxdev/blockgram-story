@@ -62,7 +62,7 @@ export function TableOfContent() {
       >
         <div className="wrapper small bg-[#2EA4DF]">
           <div className="text-center">
-            <h3 className="text-styles-h1">
+            <h3 className="text-styles-h1 text-white">
               Table of <span className="alt">Contents</span>
             </h3>
           </div>
@@ -89,7 +89,7 @@ export function TableOfContent() {
                 >
                   <Link
                     to={link.href}
-                    className={`rounded-[6.154vw] sm:rounded-[1.25vw] flex transition-all duration-250 p-[6.154vw] md:p-[1.667vw] size-auto md:size-[16vw] justify-between flex-col border-[0.513vw] sm:border-[0.104vw] border-dark-purple text-dark-purple  hover:bg-light-purple hover:text-white nav-card ${link.color}`}
+                    className={`rounded-[6.154vw] sm:rounded-[1.25vw] flex transition-all duration-250 p-[6.154vw] md:p-[1.667vw] size-auto md:size-[16vw] justify-between flex-col border-[0.513vw] sm:border-[0.104vw] border-dark-purple text-dark-purple  hover:bg-[#2EA4DF] hover:text-white nav-card `}
                   >
                     <div className="text-styles-h4">{link.number}</div>
                     <div className="text-styles-h4">{link.title}</div>

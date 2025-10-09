@@ -18,7 +18,7 @@ export function About() {
         transition={{ duration: 0.6 }}
       >
         <div className="text-center">
-          <h3 className="text-styles-h1">About Blockgram</h3>
+          <h3 className="text-styles-h1 text-white">About Blockgram</h3>
         </div>
       </motion.div>
 
