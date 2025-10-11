@@ -3,34 +3,10 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 
 const keyFindings = [
   {
-    title: "Scam Bots and Fake Accounts",
-    description:
-      "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over **60% of people say they face scam attempts every month**.",
-    image: "/keys/Scam bots.png",
-  },
-  {
-    title: "Risky Payments",
-    description:
-      "Copying and pasting wallet addresses is still the norm. A single mistake can cost users their money instantly.",
-    image: "/keys/Risky payments.png",
-  },
-  {
     title: "Missing AI Assistance",
     description:
       "Telegram leaves users drowning in information. There are no AI summaries, no contextual search, and no way to “ask the chat” for quick answers.",
     image: "/keys/Missing AI assistance.png",
-  },
-  {
-    title: "Forgotten Chats",
-    description:
-      "Catching up in an active group is almost impossible. Hundreds of unread messages mean wasted time and missed context.",
-    image: "/keys/Forgotten chats.png",
-  },
-  {
-    title: "Identity Confusion",
-    description:
-      "Anyone can pretend to be a KOL or project lead. Communities spend hours verifying who is real and who is not.",
-    image: "/keys/Identity Confusion.png",
   },
   {
     title: "Notification Overload",
@@ -43,6 +19,30 @@ const keyFindings = [
     description:
       "Power users juggle work groups, trading accounts, and communities separately. Telegram gives no easy way to unify or manage them.",
     image: "/keys/Too Many Accounts.png",
+  },
+  {
+    title: "Scam Bots and Fake Accounts",
+    description:
+      "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over **60% of people say they face scam attempts every month**.",
+    image: "/keys/Scam bots.png",
+  },
+  {
+    title: "Risky Payments",
+    description:
+      "Copying and pasting wallet addresses is still the norm. A single mistake can cost users their money instantly.",
+    image: "/keys/Risky payments.png",
+  },
+  {
+    title: "Forgotten Chats",
+    description:
+      "Catching up in an active group is almost impossible. Hundreds of unread messages mean wasted time and missed context.",
+    image: "/keys/Forgotten chats.png",
+  },
+  {
+    title: "Identity Confusion",
+    description:
+      "Anyone can pretend to be a KOL or project lead. Communities spend hours verifying who is real and who is not.",
+    image: "/keys/Identity Confusion.png",
   },
 ];
 
